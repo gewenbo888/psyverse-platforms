@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Psyverse Platforms & Twitter Matrix | 100 全通平台与 57 推特矩阵总览</title>
+  <title>Psyverse Platforms & Twitter Matrix | 175 全球全通分发平台与 57 推特矩阵总览</title>
 
   <!-- SEO · GEO -->
-  <meta name="description" content="Psyverse 100 全通平台大盘、母语分发矩阵与 57 个 Twitter/X 官方矩阵账号全景控制台。支持即时检索、环境隔离视图与一键直达。">
-  <meta name="keywords" content="Psyverse, 100平台, Twitter矩阵, X账号, 推特账号, 全通平台, 独立博客, 开源协同, Etherpad, Nostr, Bluesky, GitHub">
+  <meta name="description" content="Psyverse 175 全球全通分发平台大盘、8大母语分发矩阵与 57 个 Twitter/X 官方矩阵账号全景控制台。支持即时检索、环境隔离视图与一键直达。">
+  <meta name="keywords" content="Psyverse, 175平台, Twitter矩阵, X账号, 推特账号, 全球全通平台, Product Hunt, Hugging Face, Farcaster, Qiita, Velog, Habr, Bluesky, Nostr, 独立博客, 开源协同, Etherpad">
   <meta name="author" content="Gewenbo">
   <link rel="canonical" href="https://platforms.psyverse.fun/">
   <link rel="alternate" hreflang="en" href="https://platforms.psyverse.fun/">
   <link rel="alternate" hreflang="zh-CN" href="https://platforms.psyverse.fun/">
   <link rel="alternate" hreflang="x-default" href="https://platforms.psyverse.fun/">
   <meta property="og:title" content="Psyverse Platforms & Twitter Matrix Dashboard">
-  <meta property="og:description" content="Psyverse 100 全通平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台">
+  <meta property="og:description" content="Psyverse 175 全球全通分发平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台">
   <meta property="og:url" content="https://platforms.psyverse.fun/">
   <meta property="og:site_name" content="Psyverse">
   <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Psyverse Platforms & Twitter Matrix Dashboard">
-  <meta name="twitter:description" content="100 全通平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台">
+  <meta name="twitter:description" content="175 全球全通分发平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台">
   <meta property="og:image" content="https://platforms.psyverse.fun/og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -36,9 +36,9 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Psyverse Platforms & Twitter Matrix Dashboard",
-    "description": "Psyverse 100 全通平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台",
+    "description": "Psyverse 175 全球全通分发平台大盘与 57 个 Twitter/X 官方矩阵账号全景控制台",
     "url": "https://platforms.psyverse.fun/",
-    "inLanguage": ["zh-CN", "en"],
+    "inLanguage": ["zh-CN", "en", "ja", "ko", "fr", "de", "es", "ru"],
     "author": { "@type": "Person", "name": "Gewenbo", "url": "https://psyverse.fun/" },
     "publisher": { "@type": "Organization", "name": "Psyverse", "url": "https://psyverse.fun/" }
   }
@@ -48,67 +48,90 @@
   <!-- Analytics & Cross-site Bar -->
   <script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+
   <style>
     :root {
-      --background: #090d16;
-      --foreground: #f1f5f9;
-      --card: #0f172a;
-      --border: #1e293b;
-      --muted-foreground: #94a3b8;
-      --placeholder: #64748b;
-      --primary: #3b82f6;
-      --primary-foreground: #ffffff;
+      --background: #f8fafc;
+      --foreground: #0f172a;
+      --card: #ffffff;
+      --border: #e2e8f0;
+      --muted: #64748b;
+      --muted-foreground: #64748b;
+      --placeholder: #94a3b8;
     }
-    body {
-      background-color: var(--background);
-      color: var(--foreground);
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #090d16;
+        --foreground: #f1f5f9;
+        --card: #111827;
+        --border: #1f293d;
+        --muted: #94a3b8;
+        --muted-foreground: #94a3b8;
+        --placeholder: #64748b;
+      }
     }
-    ::-webkit-scrollbar { width: 6px; height: 6px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: rgba(150, 150, 150, 0.3); border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(150, 150, 150, 0.5); }
-    .badge-pulse {
-      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
     }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(0.95); }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.4);
+      border-radius: 9999px;
     }
   </style>
 </head>
-<body class="antialiased p-3 md:p-6 font-sans">
+<body class="min-h-screen bg-[var(--background)] text-[var(--foreground)] font-sans antialiased selection:bg-blue-500 selection:text-white pb-20">
 
-  <!-- Main Container Card -->
-  <div class="max-w-7xl mx-auto bg-[var(--card)] border border-[var(--border)] rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md">
-    
-    <!-- Top Header Banner -->
-    <div class="px-6 py-6 border-b border-[var(--border)] bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+  <!-- Main Container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+
+    <!-- Top Navigation Breadcrumb / Portal Back -->
+    <div class="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-[var(--border)]">
+      <div class="flex items-center gap-2 text-xs text-[var(--muted-foreground)]">
+        <a href="https://psyverse.fun" class="font-bold text-blue-500 hover:underline">Psyverse</a>
+        <span>/</span>
+        <a href="https://psyverse.fun/atlas.html" class="hover:underline">Atlas 矩阵</a>
+        <span>/</span>
+        <span class="text-[var(--foreground)] font-medium">Platforms 175 & Twitter 57</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a 
+          href="https://dashboard.psyverse.fun" 
+          target="_blank" 
+          class="text-xs px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:bg-[var(--border)] font-medium transition-all"
+        >
+          📊 实时访问量监控
+        </a>
+        <a 
+          href="https://x.com/TrustlessX" 
+          target="_blank" 
+          class="text-xs px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all shadow-sm"
+        >
+          🐦 @TrustlessX 官方
+        </a>
+      </div>
+    </div>
+
+    <!-- Header Banner -->
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-600/10 via-purple-600/10 to-pink-600/10 border border-[var(--border)] p-6 md:p-8 mb-8 backdrop-blur-sm">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <div class="flex flex-wrap items-center gap-2 mb-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 badge-pulse"></span>
-              100 全通平台 (HTTP 200)
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/30">
-              <span>🐦</span> 57 个 Twitter/X 矩阵账号
-            </span>
-            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20">
-              物理隔离 / 零验证码直通
-            </span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-500 border border-blue-500/20 mb-3">
+            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+            Psyverse 矩阵生态 · 全球内容分发与社交矩阵控制中心
           </div>
           <h1 class="text-2xl md:text-3xl font-black tracking-tight text-[var(--foreground)] flex items-center gap-2">
             <span>🌌</span> Psyverse 帝国全景指挥中心
           </h1>
           <p class="text-sm text-[var(--muted-foreground)] mt-1">
-            全网 100 全通内容分发平台大盘 + 57 个 Twitter/X 官方矩阵账号统一检索导航
+            全网 175 全球全通内容分发平台大盘 + 57 个 Twitter/X 官方矩阵账号统一检索导航
           </p>
         </div>
         
         <!-- Live Quick Stats -->
         <div class="flex items-center gap-2.5">
           <div class="text-center px-3.5 py-2 rounded-xl bg-[var(--background)]/70 border border-[var(--border)] shadow-sm">
-            <div class="text-xl font-black text-blue-500">100</div>
+            <div class="text-xl font-black text-blue-500">175</div>
             <div class="text-[11px] text-[var(--muted-foreground)] font-medium">全通平台</div>
           </div>
           <div class="text-center px-3.5 py-2 rounded-xl bg-[var(--background)]/70 border border-[var(--border)] shadow-sm">
@@ -116,7 +139,7 @@
             <div class="text-[11px] text-[var(--muted-foreground)] font-medium">推特账号</div>
           </div>
           <div class="text-center px-3.5 py-2 rounded-xl bg-[var(--background)]/70 border border-[var(--border)] shadow-sm">
-            <div class="text-xl font-black text-emerald-500">5</div>
+            <div class="text-xl font-black text-emerald-500">8+</div>
             <div class="text-[11px] text-[var(--muted-foreground)] font-medium">母语覆盖</div>
           </div>
           <div class="text-center px-3.5 py-2 rounded-xl bg-[var(--background)]/70 border border-[var(--border)] shadow-sm">
@@ -133,7 +156,7 @@
           id="view-tab-platforms" 
           class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-blue-600 text-white shadow-md transition-all"
         >
-          <span>🌐</span> 100 全通分发平台池 (100)
+          <span>🌐</span> 175 全球全通分发平台池 (175)
         </button>
         <button 
           onclick="switchMainView('twitter')" 
@@ -163,8 +186,17 @@
             <button onclick="switchManifesto('DE')" id="tab-btn-DE" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
               🇩🇪 德语 (Deutsch)
             </button>
+            <button onclick="switchManifesto('JA')" id="tab-btn-JA" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
+              🇯🇵 日语 (日本語)
+            </button>
+            <button onclick="switchManifesto('KO')" id="tab-btn-KO" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
+              🇰🇷 韩语 (한국어)
+            </button>
             <button onclick="switchManifesto('ES')" id="tab-btn-ES" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
               🇪🇸 西班牙语 (Español)
+            </button>
+            <button onclick="switchManifesto('RU')" id="tab-btn-RU" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
+              🇷🇺 俄语 (Русский)
             </button>
             <button onclick="switchManifesto('NL')" id="tab-btn-NL" class="px-3 py-1 text-xs font-semibold rounded-lg bg-[var(--card)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">
               🇳🇱 荷兰语 (Nederlands)
@@ -198,34 +230,44 @@
               type="text" 
               id="platform-search-input" 
               oninput="applyPlatformFilters()" 
-              placeholder="搜索平台名称、语种（如 法语、德语）、类别、自动化方式或网址..." 
+              placeholder="搜索平台名称、语种（如 日语、韩语、法语、德语）、类别（如 AI、去中心化、极客）、自动化方式或网址..." 
               class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-[var(--border)] bg-[var(--background)] text-sm text-[var(--foreground)] placeholder-[var(--placeholder)] focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
             >
           </div>
           <div class="text-xs font-semibold text-[var(--muted-foreground)] px-3 py-2 rounded-lg bg-[var(--background)] border border-[var(--border)] whitespace-nowrap shadow-sm">
-            显示 <span id="filtered-platform-count" class="text-blue-500 font-bold">100</span> / 100 平台
+            显示 <span id="filtered-platform-count" class="text-blue-500 font-bold">175</span> / 175 平台
           </div>
         </div>
 
+        <!-- Language Filters -->
         <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-medium">
           <span class="text-[var(--muted-foreground)] whitespace-nowrap mr-1">语言筛选:</span>
-          <button onclick="setLangFilter('ALL')" id="lang-btn-ALL" class="lang-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all shadow-sm">全部 (100)</button>
-          <button onclick="setLangFilter('FR')" id="lang-btn-FR" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇫🇷 法语 (14)</button>
-          <button onclick="setLangFilter('DE')" id="lang-btn-DE" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇩🇪 德语 (3)</button>
-          <button onclick="setLangFilter('ES')" id="lang-btn-ES" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇪🇸 西班牙语 (1)</button>
-          <button onclick="setLangFilter('NL')" id="lang-btn-NL" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇳🇱 荷兰语 (1)</button>
-          <button onclick="setLangFilter('EN')" id="lang-btn-EN" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🌐 英语/国际 (81)</button>
+          <button onclick="setLangFilter('ALL')" id="lang-btn-ALL" class="lang-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all shadow-sm">全部 (175)</button>
+          <button onclick="setLangFilter('EN')" id="lang-btn-EN" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🌐 英语/国际 (128)</button>
+          <button onclick="setLangFilter('FR')" id="lang-btn-FR" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇫🇷 法语 (17)</button>
+          <button onclick="setLangFilter('DE')" id="lang-btn-DE" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇩🇪 德语 (7)</button>
+          <button onclick="setLangFilter('JA')" id="lang-btn-JA" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇯🇵 日语 (5)</button>
+          <button onclick="setLangFilter('KO')" id="lang-btn-KO" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇰🇷 韩语 (4)</button>
+          <button onclick="setLangFilter('ZH')" id="lang-btn-ZH" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇨🇳 中文/港台 (6)</button>
+          <button onclick="setLangFilter('ES')" id="lang-btn-ES" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇪🇸 西班牙语 (4)</button>
+          <button onclick="setLangFilter('RU')" id="lang-btn-RU" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇷🇺 俄语/东欧 (2)</button>
+          <button onclick="setLangFilter('NL')" id="lang-btn-NL" class="lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇳🇱 荷兰语 (2)</button>
         </div>
 
+        <!-- Category Filters -->
         <div class="flex items-center gap-2 overflow-x-auto pb-1 text-xs font-medium">
           <span class="text-[var(--muted-foreground)] whitespace-nowrap mr-1">分类筛选:</span>
-          <button onclick="setCatFilter('ALL')" id="cat-btn-ALL" class="cat-pill px-3 py-1 rounded-lg bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 font-semibold transition-all shadow-sm">全部分类</button>
-          <button onclick="setCatFilter('开源协同 Etherpad')" id="cat-btn-pad" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">开源协同 Etherpad (21)</button>
-          <button onclick="setCatFilter('顶级开发者生态')" id="cat-btn-dev" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">顶级开发者生态 (21)</button>
-          <button onclick="setCatFilter('去中心化与抗审查')" id="cat-btn-decent" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">去中心化/抗审查 (20)</button>
-          <button onclick="setCatFilter('极客代码与分发')" id="cat-btn-paste" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">极客代码/Paste (15)</button>
-          <button onclick="setCatFilter('独立博客与出版')" id="cat-btn-blog" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">独立博客与出版 (13)</button>
-          <button onclick="setCatFilter('全球社交与论坛')" id="cat-btn-social" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">全球社交论坛 (10)</button>
+          <button onclick="setCatFilter('ALL')" id="cat-btn-ALL" class="cat-pill px-3 py-1 rounded-lg bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 font-semibold transition-all shadow-sm">全部分类 (175)</button>
+          <button onclick="setCatFilter('AI与产品首发')" id="cat-btn-ai" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🚀 AI与产品首发 (10)</button>
+          <button onclick="setCatFilter('顶级开发者生态')" id="cat-btn-dev" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">💻 顶级开发者生态 (34)</button>
+          <button onclick="setCatFilter('去中心化与抗审查')" id="cat-btn-decent" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🌐 去中心化/抗审查 (31)</button>
+          <button onclick="setCatFilter('东亚本土高流量')" id="cat-btn-asia" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🌏 东亚本土高流量 (16)</button>
+          <button onclick="setCatFilter('欧洲与西语社区')" id="cat-btn-eu" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🇪🇺 欧洲与西语社区 (12)</button>
+          <button onclick="setCatFilter('认知科学与前沿研究')" id="cat-btn-cog" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">🔬 认知科学与科研 (6)</button>
+          <button onclick="setCatFilter('开源协同 Etherpad')" id="cat-btn-pad" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">📝 开源协同 Etherpad (25)</button>
+          <button onclick="setCatFilter('极客代码与分发')" id="cat-btn-paste" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">⚡ 极客代码与分发 (14)</button>
+          <button onclick="setCatFilter('独立博客与出版')" id="cat-btn-blog" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">📰 独立博客与出版 (18)</button>
+          <button onclick="setCatFilter('全球社交与论坛')" id="cat-btn-social" class="cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all">💬 全球社交与论坛 (9)</button>
         </div>
       </div>
 
@@ -308,10 +350,11 @@
       <div class="flex items-center gap-3">
         <span>🔒 账号双矩阵物理隔离严格受控</span> · 
         <span>🛡️ 商务/科技矩阵独立运行</span> ·
-        <span>🐦 57 个 Twitter 账号集中收录</span>
+        <span>🌐 175 全球全通平台</span> ·
+        <span>🐦 57 个 Twitter 矩阵集中托管</span>
       </div>
       <div>
-        大盘同步时间：2026-09-16 19:45
+        大盘同步时间：2026-09-16 20:00
       </div>
     </div>
 
@@ -319,9 +362,9 @@
 
   <!-- Client-side Interactive Logic -->
   <script>
-    const platforms = [{"id": 1, "name": "Telegraph (×20语言)", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 多语/英语", "method": "REST API 直发", "desc": "Telegram 旗下免登录匿名富文本长文发布系统，永久免鉴权", "url": "https://telegra.ph/源代码科技文明的底层逻辑与人类智能的演化路径--Psyversefun-全景解析-09-16"}, {"id": 2, "name": "Twitter / X", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "自动化直发", "desc": "@TrustlessX 官方创作者账号，全球顶流即时科技社交网络", "url": "https://x.com/TrustlessX"}, {"id": 3, "name": "dev.to", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Setter", "desc": "Forem 全球开发者极客社区，超高技术权重与开发者聚合度", "url": "https://dev.to/gewenbo888"}, {"id": 4, "name": "知乎 (笑天笑)", "category": "全球社交与论坛", "lang": "ZH", "langLabel": "🇨🇳 中文", "method": "Fiber 原生调取", "desc": "中文高认知与知识问答社区，技术深度专栏讨论", "url": "https://www.zhihu.com"}, {"id": 5, "name": "Viblo", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM 发布流程", "desc": "亚太知名技术工程师社区，支持 Markdown 与代码富文本", "url": "https://viblo.asia"}, {"id": 6, "name": "Write.as", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "极简无干扰长文出版网络，原生支持 Markdown 与分布式联邦", "url": "https://write.as"}, {"id": 7, "name": "Plurk", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Click", "desc": "时间轴微博客社区，亚太特色极客交流网络", "url": "https://www.plurk.com"}, {"id": 8, "name": "CSDN", "category": "顶级开发者生态", "lang": "ZH", "langLabel": "🇨🇳 中文", "method": "DOM Click", "desc": "国内老牌开发者软件工程师社区，高百度权重", "url": "https://blog.csdn.net"}, {"id": 9, "name": "Qiita", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/日", "method": "DOM Click", "desc": "日本最大技术工程师社区，高质量技术专栏沉淀", "url": "https://qiita.com/gewenbo888"}, {"id": 10, "name": "Tumblr", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Gutenberg", "desc": "全球老牌创意博客网络，支持富文本多媒体与长文", "url": "https://tumblr.com"}, {"id": 11, "name": "Hacker News", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Ask HN 直发", "desc": "Y Combinator 极客圣地，全球最严苛硬核技术社区", "url": "https://news.ycombinator.com"}, {"id": 12, "name": "Matters", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/中", "method": "无密码邮件直通", "desc": "分布式 Web3 创作网络，文章上链 IPFS 永久保存", "url": "https://matters.town"}, {"id": 13, "name": "Mastodon tilde.zone", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "极客 Unix tilde 文化联邦宇宙大站", "url": "https://tilde.zone"}, {"id": 14, "name": "Mastodon ieji.de", "category": "去中心化与抗审查", "lang": "DE", "langLabel": "🇩🇪 德语/英", "method": "Federation API", "desc": "德国独立联邦节点，纯净无追踪", "url": "https://ieji.de"}, {"id": 15, "name": "Mastodon piaille.fr", "category": "去中心化与抗审查", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Federation API", "desc": "法国 20,000+ 用户顶级大站，法语区数字自由阵地", "url": "https://piaille.fr"}, {"id": 16, "name": "Mastodon mstdn.party", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "48,000+ 用户全球顶级综合大站", "url": "https://mstdn.party"}, {"id": 17, "name": "Mastodon mstdn.plus", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "10,000+ 活跃用户高质量联邦节点", "url": "https://mstdn.plus"}, {"id": 18, "name": "Mastodon glasgow.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "苏格兰格拉斯哥区域自治网络节点", "url": "https://glasgow.social"}, {"id": 19, "name": "Mastodon social.vivaldi.net", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "Vivaldi 浏览器官方运营的权威去中心化节点", "url": "https://social.vivaldi.net"}, {"id": 20, "name": "Mastodon mastodon.au", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "澳大利亚 28,000+ 用户国家级自治大站", "url": "https://mastodon.au"}, {"id": 21, "name": "Mastodon 101010.pl", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/波", "method": "Federation API", "desc": "波兰最古老的独立联邦节点", "url": "https://101010.pl"}, {"id": 22, "name": "Mastodon qlub.social", "category": "去中心化与抗审查", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Federation API", "desc": "加拿大魁北克 18,000+ 法语区核心节点", "url": "https://qlub.social"}, {"id": 23, "name": "Mastodon mastodon.bida.im", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/意", "method": "Federation API", "desc": "意大利 21,000+ 用户历史自治节点", "url": "https://mastodon.bida.im"}, {"id": 24, "name": "Buttondown", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Email Markdown", "desc": "为软件工程师打造的高品质邮件出版网络", "url": "https://buttondown.email"}, {"id": 25, "name": "Paper.wf", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "WriteFreely", "desc": "欧洲分布式 WriteFreely 实例，无广告追踪", "url": "https://paper.wf"}, {"id": 26, "name": "Zenn", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/日", "method": "DOM Action", "desc": "日本现代化高品质技术创作者分享社区", "url": "https://zenn.dev"}, {"id": 27, "name": "DeviantArt", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Journal Overlay", "desc": "全球最大数字艺术与创作者极客社群", "url": "https://deviantart.com"}, {"id": 28, "name": "rant.li", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "WriteFreely", "desc": "专注自由表达与抗审查的极简写作平台", "url": "https://rant.li"}, {"id": 29, "name": "toot.wales", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "英国威尔士独立开源文化联邦节点", "url": "https://toot.wales"}, {"id": 30, "name": "mataroa.blog", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Django Form", "desc": "零 JavaScript 追求极致轻量纯净的写作平台", "url": "https://mataroa.blog"}, {"id": 31, "name": "paste.rs", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "Raw POST API", "desc": "Rust 构建的极简 REST 代码分发服务，支持命令行直投", "url": "https://paste.rs/GDYBS"}, {"id": 32, "name": "rentry.co", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "全球最流行的 Markdown 匿名永久托管剪贴板", "url": "https://rentry.co/w3a7dygh"}, {"id": 33, "name": "dpaste.com", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "Python 社区老牌代码与文本永久分享服务", "url": "https://dpaste.com"}, {"id": 34, "name": "velog.io", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/韩", "method": "OAuth/DOM", "desc": "韩国第一大技术开发者博客与开源技术平台", "url": "https://velog.io/@gewenbo"}, {"id": 35, "name": "GitHub Gist", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "GitHub 官方代码片段与技术文档服务，极高权威权重", "url": "https://gist.github.com/gewenbo888/44eda92b20d014e7e33a829bb7510c44"}, {"id": 36, "name": "GitHub Pages", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "Git 自动化部署", "desc": "全球顶流静态站点托管服务，极速 CDN 加速", "url": "https://gewenbo888.github.io/psyverse-posts/"}, {"id": 37, "name": "surge.sh", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "CLI expect", "desc": "极客单命令静态云部署服务，秒级上线独立子域", "url": "https://psyverse-test.surge.sh"}, {"id": 38, "name": "Vercel", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API v13", "desc": "全球顶尖前端云原生边缘基础设施，无感知部署", "url": "https://psyverse-api-test.vercel.app"}, {"id": 39, "name": "Medium", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "CE Editor", "desc": "全球最大思想与深度长文发表平台，权威搜索引擎权重", "url": "https://medium.com/@gewenbo888"}, {"id": 40, "name": "Friendica world", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "ActivityPub", "desc": "去中心化宏观联邦网络，兼容 Facebook/Twitter 形态", "url": "https://libranet.de"}, {"id": 41, "name": "Friendica inne.city", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "ActivityPub", "desc": "欧洲去中心化独立自治节点", "url": "https://inne.city"}, {"id": 42, "name": "Read the Docs", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "Git Webhook", "desc": "全球开源软件官方文档标配托管平台", "url": "https://psyverse-live.readthedocs.io"}, {"id": 43, "name": "CodePen", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "CodeMirror API", "desc": "全球最大的前端开发与创意极客沙盒分享社区", "url": "https://codepen.io/Wenbo-Ge/pen/pveyeow"}, {"id": 44, "name": "Nostr snort.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "抗审查去中心化社交中继客户端", "url": "https://snort.social"}, {"id": 45, "name": "Nostr nostter.app", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "日本极客开发的高颜值 Nostr 去中心化客户端", "url": "https://nostter.app"}, {"id": 46, "name": "Nostr primal.net", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "目前体验最好的下一代去中心化社交客户端", "url": "https://primal.net"}, {"id": 47, "name": "note.com", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/日", "method": "ProseMirror", "desc": "日本第一大内容与知识出版网络", "url": "https://note.com"}, {"id": 48, "name": "Quora", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Action", "desc": "全球高权重问答社区，知识搜索引擎主力节点", "url": "https://quora.com"}, {"id": 49, "name": "Blogger", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Google API", "desc": "Google 旗下老牌博客平台，独立子域 psyverse888blog", "url": "https://psyverse888blog.blogspot.com"}, {"id": 50, "name": "Mastodon defcon.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "CDP Native", "desc": "DEF CON 世界黑客大会官方联邦节点", "url": "https://defcon.social"}, {"id": 51, "name": "GitHub Discussions", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "GraphQL API", "desc": "GitHub 官方社区研讨区，结构化 Markdown 原生展示", "url": "https://github.com/gewenbo888/psyverse-posts/discussions/3"}, {"id": 52, "name": "paste.c-net.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "永久有效极简无阻断代码发布网络", "url": "https://paste.c-net.org/UnderdogDarryl"}, {"id": 53, "name": "Nostr NIP-23 长文", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "WebSocket 广播", "desc": "BIP-340 签名 Kind 30023 长文事件，广播至 4 大公网中继", "url": "https://primal.net/e/c1d5fa4c29c5442047827a0d69d3d528b9cbac6b92382a7c24f91857fadcb0d8"}, {"id": 54, "name": "WordPress.com", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "REST 全文落地", "desc": "全球最大独立开源博客系统，官方二级独立博客站点", "url": "https://psyverse888.wordpress.com"}, {"id": 55, "name": "Bluesky", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "AT Protocol XRPC", "desc": "Jack Dorsey 发起的新一代开放去中心化社交网络", "url": "https://bsky.app/profile/psyverse888.bsky.social/post/3mvmazwi45z2x"}, {"id": 56, "name": "Product Hunt", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "OAuth 授权", "desc": "硅谷第一大新科技产品发布与极客研讨社区", "url": "https://www.producthunt.com"}, {"id": 57, "name": "Netlify Drop", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DataTransfer API", "desc": "现代 Web 自动化托管平台，独立二级域名分发", "url": "https://app.netlify.com/drop"}, {"id": 58, "name": "Reddit", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Shadow DOM Walk", "desc": "全球最大极客论坛与互联网头条社区", "url": "https://reddit.com"}, {"id": 59, "name": "paste.sh", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "CLI OpenSSL", "desc": "端到端加密极客文本分发平台", "url": "https://paste.sh/p4Q-sHxzY"}, {"id": 60, "name": "cl1p.net", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST POST API", "desc": "互联网极简公共剪贴板，支持 URL 自定义即时同步", "url": "https://cl1p.net/psyverse-manifesto-2026"}, {"id": 61, "name": "pastemyst", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API v2", "desc": "极客现代语法高亮分发节点，支持永久有效与原生 Markdown", "url": "https://paste.myst.rs/2zsjhbkp"}, {"id": 62, "name": "paste.debian.net", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 API v1", "desc": "Debian Linux 官方公共基础设施，支持 90 天公开留存", "url": "https://paste.debian.net/hidden/4d58e96f"}, {"id": 63, "name": "paste.centos.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "Stikked 自动化", "desc": "RedHat / CentOS / Fedora 官方开源基础设施", "url": "https://paste.centos.org/view/98c339fa"}, {"id": 64, "name": "paste.openstack.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "LodgeIt 自动化", "desc": "OpenStack 官方公共云架构基础设施", "url": "https://paste.openstack.org/show/835530/"}, {"id": 65, "name": "hastebin (zneix)", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "欧洲经典 Hastebin 纯文本秒发节点", "url": "https://haste.zneix.eu/elutelokaq"}, {"id": 66, "name": "pad.riseup.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "Riseup 全球顶级隐私基础设施，永久免鉴权协同", "url": "https://pad.riseup.net/p/psyverse-manifesto"}, {"id": 67, "name": "etherpad.wikimedia.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "维基媒体（Wikimedia/Wikipedia）官方公共协作文档", "url": "https://etherpad.wikimedia.org/p/psyverse-manifesto"}, {"id": 68, "name": "pad.systemli.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "欧洲黑客与隐私倡导者网络，高抗审查能力", "url": "https://pad.systemli.org/p/psyverse-manifesto"}, {"id": 69, "name": "pad.disroot.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "Disroot 去中心化自由运动技术网络", "url": "https://pad.disroot.org/p/psyverse-manifesto"}, {"id": 70, "name": "GitHub Releases", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "语义化发布版本官方展示页，极高 Google SEO 权重", "url": "https://github.com/gewenbo888/psyverse-posts/releases/tag/v1.1.0"}, {"id": 71, "name": "GitHub Issues", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "结构化 Issue 长文讨论，自带索引与全网订阅", "url": "https://github.com/gewenbo888/psyverse-posts/issues/5"}, {"id": 72, "name": "board.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "奥地利/欧洲公益组织 Fairkom 运营的高性能协作网络", "url": "https://board.net/p/psyverse-manifesto"}, {"id": 73, "name": "pad.chapril.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "April 法国自由软件推进联盟官方基础设施", "url": "https://pad.chapril.org/p/psyverse-manifesto"}, {"id": 74, "name": "annuel.framapad.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "Framasoft 旗舰实例，欧洲开源软件运动灯塔", "url": "https://annuel.framapad.org/p/psyverse-manifesto"}, {"id": 75, "name": "pad.tetaneutral.net", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国非营利网络中立运营商与数字自由网络", "url": "https://pad.tetaneutral.net/p/psyverse-manifesto"}, {"id": 76, "name": "pad.gresille.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "专注于自由表达与去中心化抗审查的欧洲自治集体", "url": "https://pad.gresille.org/p/psyverse-manifesto"}, {"id": 77, "name": "pad.colibris-outilslibres.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国 Colibris 开源工具联合基础设施", "url": "https://pad.colibris-outilslibres.org/p/psyverse-manifesto"}, {"id": 78, "name": "pad.lqdn.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "La Quadrature du Net 欧洲顶级数字人权与反监控倡导机构", "url": "https://pad.lqdn.fr/p/psyverse-manifesto"}, {"id": 79, "name": "pad.sans-nuage.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "Sans-Nuage 欧洲伦理开源云，无追踪纯净协作节点", "url": "https://pad.sans-nuage.fr/p/psyverse-manifesto"}, {"id": 80, "name": "pad.infini.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "创立于 1995 年的法国三十年老牌非营利独立互联网协会", "url": "https://pad.infini.fr/p/psyverse-manifesto"}, {"id": 81, "name": "pad.picasoft.net", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国 UTC 贡比涅技术大学高等工科自由软件联盟核心节点", "url": "https://pad.picasoft.net/p/psyverse-manifesto"}, {"id": 82, "name": "pad.kaz.bzh", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国布列塔尼伦理云协作网络，数据自主倡导节点", "url": "https://pad.kaz.bzh/p/psyverse-manifesto"}, {"id": 83, "name": "pad.stratum0.org", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "德国混沌计算机俱乐部 (CCC) 布伦瑞克知名黑客空间", "url": "https://pad.stratum0.org/p/psyverse-manifesto"}, {"id": 84, "name": "paste.helpch.at", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST POST API", "desc": "欧洲经典 Hastebin 架构高防分发节点，秒级生成永久短链", "url": "https://paste.helpch.at/okuganabim"}, {"id": 85, "name": "pad.tetalab.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国图卢兹黑客空间与极客创客实验室核心基础设施", "url": "https://pad.tetalab.org/p/psyverse-manifesto"}, {"id": 86, "name": "pad.libre-service.eu", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "欧洲伦理开源云基础设施，坚守数字中立与开放原则", "url": "https://pad.libre-service.eu/p/psyverse-manifesto"}, {"id": 87, "name": "pad.coagul.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国勃艮第 Côte-d'Or 自由软件用户协会旗舰节点", "url": "https://pad.coagul.org/p/psyverse-manifesto"}, {"id": 88, "name": "pad.parinux.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "创立于 1998 年的巴黎 Linux 与自由软件协会官方基础设施", "url": "https://pad.parinux.org/p/psyverse-manifesto"}, {"id": 89, "name": "GitHub Pull Requests", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "顶级开发者开源代码评审与公开社区治理交流流", "url": "https://github.com/gewenbo888/psyverse-posts/pull/6"}, {"id": 90, "name": "pad.puscii.nl", "category": "开源协同 Etherpad", "lang": "NL", "langLabel": "🇳🇱 荷兰语", "method": "Etherpad Import", "desc": "荷兰乌特勒支自治独立技术集体，致力于去中心化数字自由", "url": "https://pad.puscii.nl/p/psyverse-manifesto"}, {"id": 91, "name": "pad.piratenpartei.at", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "奥地利海盗党官方公共政制协同节点，数字民主与反审查", "url": "https://pad.piratenpartei.at/p/psyverse-manifesto"}, {"id": 92, "name": "etherpad.pp-international.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "海盗党国际 (PPI) 官方基础设施 (联合国教科文组织观察员)", "url": "https://etherpad.pp-international.net/p/psyverse-manifesto"}, {"id": 93, "name": "pad.sindominio.net", "category": "开源协同 Etherpad", "lang": "ES", "langLabel": "🇪🇸 西班牙语", "method": "Etherpad Import", "desc": "创立于 1999 年的西班牙反商业与数字自治先驱网络", "url": "https://pad.sindominio.net/p/psyverse-manifesto"}, {"id": 94, "name": "pad.freifunk-stuttgart.de", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "德国斯图加特草根无线网状网络社区基础设施", "url": "https://pad.freifunk-stuttgart.de/p/psyverse-manifesto"}, {"id": 95, "name": "GitHub Pages 独立站", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "自动化部署", "desc": "独立二级域名全球 CDN 加速发布站，极高权威性", "url": "https://gewenbo888.github.io/psyverse-posts/"}, {"id": 96, "name": "jsDelivr Global Open CDN", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "开放 CDN 镜像", "desc": "全球最大开源加速 CDN，秒级同步与原生跨域直连", "url": "https://cdn.jsdelivr.net/gh/gewenbo888/psyverse-posts@psyverse-manifesto-v1/MANIFESTO.md"}, {"id": 97, "name": "Raw GitHub", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "官方原生直连", "desc": "官方超低延迟 Markdown 纯文本直连源文件", "url": "https://raw.githubusercontent.com/gewenbo888/psyverse-posts/main/README.md"}, {"id": 98, "name": "GitHub Release Assets", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "软件发布版本二进制与压缩归档分发 (tar.gz)", "url": "https://github.com/gewenbo888/psyverse-posts/releases/download/v1.1.0/psyverse-manifesto.tar.gz"}, {"id": 99, "name": "GitHub Issue Comments", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "开源开发者实时互动与持续更新评论流锚点", "url": "https://github.com/gewenbo888/psyverse-posts/issues/5#issuecomment-5696515507"}, {"id": 100, "name": "GitHub PR Reviews", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "开源代码评审与公开治理交流流锚点", "url": "https://github.com/gewenbo888/psyverse-posts/pull/6#issuecomment-5696516834"}];
+    const platforms = [{"id": 1, "name": "Telegraph (×20语言)", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 多语/英语", "method": "REST API 直发", "desc": "Telegram 旗下免登录匿名富文本长文发布系统，永久免鉴权", "url": "https://telegra.ph/源代码科技文明的底层逻辑与人类智能的演化路径--Psyversefun-全景解析-09-16"}, {"id": 2, "name": "Twitter / X", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "自动化直发", "desc": "@TrustlessX 官方创作者账号，全球顶流即时科技社交网络", "url": "https://x.com/TrustlessX"}, {"id": 3, "name": "dev.to", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Setter", "desc": "Forem 全球开发者极客社区，超高技术权重与开发者聚合度", "url": "https://dev.to/gewenbo888"}, {"id": 4, "name": "知乎 (笑天笑)", "category": "全球社交与论坛", "lang": "ZH", "langLabel": "🇨🇳 中文", "method": "Fiber 原生调取", "desc": "中文高认知与知识问答社区，技术深度专栏讨论", "url": "https://www.zhihu.com"}, {"id": 5, "name": "Viblo", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM 发布流程", "desc": "亚太知名技术工程师社区，支持 Markdown 与代码富文本", "url": "https://viblo.asia"}, {"id": 6, "name": "Write.as", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "极简无干扰长文出版网络，原生支持 Markdown 与分布式联邦", "url": "https://write.as"}, {"id": 7, "name": "Plurk", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Click", "desc": "时间轴微博客社区，亚太特色极客交流网络", "url": "https://www.plurk.com"}, {"id": 8, "name": "CSDN", "category": "顶级开发者生态", "lang": "ZH", "langLabel": "🇨🇳 中文", "method": "DOM Click", "desc": "国内老牌开发者软件工程师社区，高百度权重", "url": "https://blog.csdn.net"}, {"id": 9, "name": "Qiita", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/日", "method": "DOM Click", "desc": "日本最大技术工程师社区，高质量技术专栏沉淀", "url": "https://qiita.com/gewenbo888"}, {"id": 10, "name": "Tumblr", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Gutenberg", "desc": "全球老牌创意博客网络，支持富文本多媒体与长文", "url": "https://tumblr.com"}, {"id": 11, "name": "Hacker News", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Ask HN 直发", "desc": "Y Combinator 极客圣地，全球最严苛硬核技术社区", "url": "https://news.ycombinator.com"}, {"id": 12, "name": "Matters", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/中", "method": "无密码邮件直通", "desc": "分布式 Web3 创作网络，文章上链 IPFS 永久保存", "url": "https://matters.town"}, {"id": 13, "name": "Mastodon tilde.zone", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "极客 Unix tilde 文化联邦宇宙大站", "url": "https://tilde.zone"}, {"id": 14, "name": "Mastodon ieji.de", "category": "去中心化与抗审查", "lang": "DE", "langLabel": "🇩🇪 德语/英", "method": "Federation API", "desc": "德国独立联邦节点，纯净无追踪", "url": "https://ieji.de"}, {"id": 15, "name": "Mastodon piaille.fr", "category": "去中心化与抗审查", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Federation API", "desc": "法国 20,000+ 用户顶级大站，法语区数字自由阵地", "url": "https://piaille.fr"}, {"id": 16, "name": "Mastodon mstdn.party", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "48,000+ 用户全球顶级综合大站", "url": "https://mstdn.party"}, {"id": 17, "name": "Mastodon mstdn.plus", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "10,000+ 活跃用户高质量联邦节点", "url": "https://mstdn.plus"}, {"id": 18, "name": "Mastodon glasgow.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "苏格兰格拉斯哥区域自治网络节点", "url": "https://glasgow.social"}, {"id": 19, "name": "Mastodon social.vivaldi.net", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "Vivaldi 浏览器官方运营的权威去中心化节点", "url": "https://social.vivaldi.net"}, {"id": 20, "name": "Mastodon mastodon.au", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "澳大利亚 28,000+ 用户国家级自治大站", "url": "https://mastodon.au"}, {"id": 21, "name": "Mastodon 101010.pl", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/波", "method": "Federation API", "desc": "波兰最古老的独立联邦节点", "url": "https://101010.pl"}, {"id": 22, "name": "Mastodon qlub.social", "category": "去中心化与抗审查", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Federation API", "desc": "加拿大魁北克 18,000+ 法语区核心节点", "url": "https://qlub.social"}, {"id": 23, "name": "Mastodon mastodon.bida.im", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/意", "method": "Federation API", "desc": "意大利 21,000+ 用户历史自治节点", "url": "https://mastodon.bida.im"}, {"id": 24, "name": "Buttondown", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Email Markdown", "desc": "为软件工程师打造的高品质邮件出版网络", "url": "https://buttondown.email"}, {"id": 25, "name": "Paper.wf", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "WriteFreely", "desc": "欧洲分布式 WriteFreely 实例，无广告追踪", "url": "https://paper.wf"}, {"id": 26, "name": "Zenn", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/日", "method": "DOM Action", "desc": "日本现代化高品质技术创作者分享社区", "url": "https://zenn.dev"}, {"id": 27, "name": "DeviantArt", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Journal Overlay", "desc": "全球最大数字艺术与创作者极客社群", "url": "https://deviantart.com"}, {"id": 28, "name": "rant.li", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "WriteFreely", "desc": "专注自由表达与抗审查的极简写作平台", "url": "https://rant.li"}, {"id": 29, "name": "toot.wales", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "Federation API", "desc": "英国威尔士独立开源文化联邦节点", "url": "https://toot.wales"}, {"id": 30, "name": "mataroa.blog", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Django Form", "desc": "零 JavaScript 追求极致轻量纯净的写作平台", "url": "https://mataroa.blog"}, {"id": 31, "name": "paste.rs", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "Raw POST API", "desc": "Rust 构建的极简 REST 代码分发服务，支持命令行直投", "url": "https://paste.rs/GDYBS"}, {"id": 32, "name": "rentry.co", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "全球最流行的 Markdown 匿名永久托管剪贴板", "url": "https://rentry.co/w3a7dygh"}, {"id": 33, "name": "dpaste.com", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "Python 社区老牌代码与文本永久分享服务", "url": "https://dpaste.com"}, {"id": 34, "name": "velog.io", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/韩", "method": "OAuth/DOM", "desc": "韩国第一大技术开发者博客与开源技术平台", "url": "https://velog.io/@gewenbo"}, {"id": 35, "name": "GitHub Gist", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "GitHub 官方代码片段与技术文档服务，极高权威权重", "url": "https://gist.github.com/gewenbo888/44eda92b20d014e7e33a829bb7510c44"}, {"id": 36, "name": "GitHub Pages", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "Git 自动化部署", "desc": "全球顶流静态站点托管服务，极速 CDN 加速", "url": "https://gewenbo888.github.io/psyverse-posts/"}, {"id": 37, "name": "surge.sh", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "CLI expect", "desc": "极客单命令静态云部署服务，秒级上线独立子域", "url": "https://psyverse-test.surge.sh"}, {"id": 38, "name": "Vercel", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API v13", "desc": "全球顶尖前端云原生边缘基础设施，无感知部署", "url": "https://psyverse-api-test.vercel.app"}, {"id": 39, "name": "Medium", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "CE Editor", "desc": "全球最大思想与深度长文发表平台，权威搜索引擎权重", "url": "https://medium.com/@gewenbo888"}, {"id": 40, "name": "Friendica world", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "ActivityPub", "desc": "去中心化宏观联邦网络，兼容 Facebook/Twitter 形态", "url": "https://libranet.de"}, {"id": 41, "name": "Friendica inne.city", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "ActivityPub", "desc": "欧洲去中心化独立自治节点", "url": "https://inne.city"}, {"id": 42, "name": "Read the Docs", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "Git Webhook", "desc": "全球开源软件官方文档标配托管平台", "url": "https://psyverse-live.readthedocs.io"}, {"id": 43, "name": "CodePen", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "CodeMirror API", "desc": "全球最大的前端开发与创意极客沙盒分享社区", "url": "https://codepen.io/Wenbo-Ge/pen/pveyeow"}, {"id": 44, "name": "Nostr snort.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "抗审查去中心化社交中继客户端", "url": "https://snort.social"}, {"id": 45, "name": "Nostr nostter.app", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "日本极客开发的高颜值 Nostr 去中心化客户端", "url": "https://nostter.app"}, {"id": 46, "name": "Nostr primal.net", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "BIP-340 密钥", "desc": "目前体验最好的下一代去中心化社交客户端", "url": "https://primal.net"}, {"id": 47, "name": "note.com", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/日", "method": "ProseMirror", "desc": "日本第一大内容与知识出版网络", "url": "https://note.com"}, {"id": 48, "name": "Quora", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "DOM Action", "desc": "全球高权重问答社区，知识搜索引擎主力节点", "url": "https://quora.com"}, {"id": 49, "name": "Blogger", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "Google API", "desc": "Google 旗下老牌博客平台，独立子域 psyverse888blog", "url": "https://psyverse888blog.blogspot.com"}, {"id": 50, "name": "Mastodon defcon.social", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "CDP Native", "desc": "DEF CON 世界黑客大会官方联邦节点", "url": "https://defcon.social"}, {"id": 51, "name": "GitHub Discussions", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "GraphQL API", "desc": "GitHub 官方社区研讨区，结构化 Markdown 原生展示", "url": "https://github.com/gewenbo888/psyverse-posts/discussions/3"}, {"id": 52, "name": "paste.c-net.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "永久有效极简无阻断代码发布网络", "url": "https://paste.c-net.org/UnderdogDarryl"}, {"id": 53, "name": "Nostr NIP-23 长文", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "WebSocket 广播", "desc": "BIP-340 签名 Kind 30023 长文事件，广播至 4 大公网中继", "url": "https://primal.net/e/c1d5fa4c29c5442047827a0d69d3d528b9cbac6b92382a7c24f91857fadcb0d8"}, {"id": 54, "name": "WordPress.com", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语", "method": "REST 全文落地", "desc": "全球最大独立开源博客系统，官方二级独立博客站点", "url": "https://psyverse888.wordpress.com"}, {"id": 55, "name": "Bluesky", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语", "method": "AT Protocol XRPC", "desc": "Jack Dorsey 发起的新一代开放去中心化社交网络", "url": "https://bsky.app/profile/psyverse888.bsky.social/post/3mvmazwi45z2x"}, {"id": 56, "name": "Product Hunt", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "OAuth 授权", "desc": "硅谷第一大新科技产品发布与极客研讨社区", "url": "https://www.producthunt.com"}, {"id": 57, "name": "Netlify Drop", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "DataTransfer API", "desc": "现代 Web 自动化托管平台，独立二级域名分发", "url": "https://app.netlify.com/drop"}, {"id": 58, "name": "Reddit", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语", "method": "Shadow DOM Walk", "desc": "全球最大极客论坛与互联网头条社区", "url": "https://reddit.com"}, {"id": 59, "name": "paste.sh", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "CLI OpenSSL", "desc": "端到端加密极客文本分发平台", "url": "https://paste.sh/p4Q-sHxzY"}, {"id": 60, "name": "cl1p.net", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST POST API", "desc": "互联网极简公共剪贴板，支持 URL 自定义即时同步", "url": "https://cl1p.net/psyverse-manifesto-2026"}, {"id": 61, "name": "pastemyst", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API v2", "desc": "极客现代语法高亮分发节点，支持永久有效与原生 Markdown", "url": "https://paste.myst.rs/2zsjhbkp"}, {"id": 62, "name": "paste.debian.net", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 API v1", "desc": "Debian Linux 官方公共基础设施，支持 90 天公开留存", "url": "https://paste.debian.net/hidden/4d58e96f"}, {"id": 63, "name": "paste.centos.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "Stikked 自动化", "desc": "RedHat / CentOS / Fedora 官方开源基础设施", "url": "https://paste.centos.org/view/98c339fa"}, {"id": 64, "name": "paste.openstack.org", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "LodgeIt 自动化", "desc": "OpenStack 官方公共云架构基础设施", "url": "https://paste.openstack.org/show/835530/"}, {"id": 65, "name": "hastebin (zneix)", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST API", "desc": "欧洲经典 Hastebin 纯文本秒发节点", "url": "https://haste.zneix.eu/elutelokaq"}, {"id": 66, "name": "pad.riseup.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "Riseup 全球顶级隐私基础设施，永久免鉴权协同", "url": "https://pad.riseup.net/p/psyverse-manifesto"}, {"id": 67, "name": "etherpad.wikimedia.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "维基媒体（Wikimedia/Wikipedia）官方公共协作文档", "url": "https://etherpad.wikimedia.org/p/psyverse-manifesto"}, {"id": 68, "name": "pad.systemli.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "欧洲黑客与隐私倡导者网络，高抗审查能力", "url": "https://pad.systemli.org/p/psyverse-manifesto"}, {"id": 69, "name": "pad.disroot.org", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "Disroot 去中心化自由运动技术网络", "url": "https://pad.disroot.org/p/psyverse-manifesto"}, {"id": 70, "name": "GitHub Releases", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "语义化发布版本官方展示页，极高 Google SEO 权重", "url": "https://github.com/gewenbo888/psyverse-posts/releases/tag/v1.1.0"}, {"id": 71, "name": "GitHub Issues", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "结构化 Issue 长文讨论，自带索引与全网订阅", "url": "https://github.com/gewenbo888/psyverse-posts/issues/5"}, {"id": 72, "name": "board.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "奥地利/欧洲公益组织 Fairkom 运营的高性能协作网络", "url": "https://board.net/p/psyverse-manifesto"}, {"id": 73, "name": "pad.chapril.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "April 法国自由软件推进联盟官方基础设施", "url": "https://pad.chapril.org/p/psyverse-manifesto"}, {"id": 74, "name": "annuel.framapad.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "Framasoft 旗舰实例，欧洲开源软件运动灯塔", "url": "https://annuel.framapad.org/p/psyverse-manifesto"}, {"id": 75, "name": "pad.tetaneutral.net", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国非营利网络中立运营商与数字自由网络", "url": "https://pad.tetaneutral.net/p/psyverse-manifesto"}, {"id": 76, "name": "pad.gresille.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "专注于自由表达与去中心化抗审查的欧洲自治集体", "url": "https://pad.gresille.org/p/psyverse-manifesto"}, {"id": 77, "name": "pad.colibris-outilslibres.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国 Colibris 开源工具联合基础设施", "url": "https://pad.colibris-outilslibres.org/p/psyverse-manifesto"}, {"id": 78, "name": "pad.lqdn.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "La Quadrature du Net 欧洲顶级数字人权与反监控倡导机构", "url": "https://pad.lqdn.fr/p/psyverse-manifesto"}, {"id": 79, "name": "pad.sans-nuage.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "Sans-Nuage 欧洲伦理开源云，无追踪纯净协作节点", "url": "https://pad.sans-nuage.fr/p/psyverse-manifesto"}, {"id": 80, "name": "pad.infini.fr", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "创立于 1995 年的法国三十年老牌非营利独立互联网协会", "url": "https://pad.infini.fr/p/psyverse-manifesto"}, {"id": 81, "name": "pad.picasoft.net", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国 UTC 贡比涅技术大学高等工科自由软件联盟核心节点", "url": "https://pad.picasoft.net/p/psyverse-manifesto"}, {"id": 82, "name": "pad.kaz.bzh", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国布列塔尼伦理云协作网络，数据自主倡导节点", "url": "https://pad.kaz.bzh/p/psyverse-manifesto"}, {"id": 83, "name": "pad.stratum0.org", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "德国混沌计算机俱乐部 (CCC) 布伦瑞克知名黑客空间", "url": "https://pad.stratum0.org/p/psyverse-manifesto"}, {"id": 84, "name": "paste.helpch.at", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "REST POST API", "desc": "欧洲经典 Hastebin 架构高防分发节点，秒级生成永久短链", "url": "https://paste.helpch.at/okuganabim"}, {"id": 85, "name": "pad.tetalab.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国图卢兹黑客空间与极客创客实验室核心基础设施", "url": "https://pad.tetalab.org/p/psyverse-manifesto"}, {"id": 86, "name": "pad.libre-service.eu", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "欧洲伦理开源云基础设施，坚守数字中立与开放原则", "url": "https://pad.libre-service.eu/p/psyverse-manifesto"}, {"id": 87, "name": "pad.coagul.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "法国勃艮第 Côte-d'Or 自由软件用户协会旗舰节点", "url": "https://pad.coagul.org/p/psyverse-manifesto"}, {"id": 88, "name": "pad.parinux.org", "category": "开源协同 Etherpad", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "Etherpad Import", "desc": "创立于 1998 年的巴黎 Linux 与自由软件协会官方基础设施", "url": "https://pad.parinux.org/p/psyverse-manifesto"}, {"id": 89, "name": "GitHub Pull Requests", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "顶级开发者开源代码评审与公开社区治理交流流", "url": "https://github.com/gewenbo888/psyverse-posts/pull/6"}, {"id": 90, "name": "pad.puscii.nl", "category": "开源协同 Etherpad", "lang": "NL", "langLabel": "🇳🇱 荷兰语", "method": "Etherpad Import", "desc": "荷兰乌特勒支自治独立技术集体，致力于去中心化数字自由", "url": "https://pad.puscii.nl/p/psyverse-manifesto"}, {"id": 91, "name": "pad.piratenpartei.at", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "奥地利海盗党官方公共政制协同节点，数字民主与反审查", "url": "https://pad.piratenpartei.at/p/psyverse-manifesto"}, {"id": 92, "name": "etherpad.pp-international.net", "category": "开源协同 Etherpad", "lang": "EN", "langLabel": "🌐 英语", "method": "Etherpad Import", "desc": "海盗党国际 (PPI) 官方基础设施 (联合国教科文组织观察员)", "url": "https://etherpad.pp-international.net/p/psyverse-manifesto"}, {"id": 93, "name": "pad.sindominio.net", "category": "开源协同 Etherpad", "lang": "ES", "langLabel": "🇪🇸 西班牙语", "method": "Etherpad Import", "desc": "创立于 1999 年的西班牙反商业与数字自治先驱网络", "url": "https://pad.sindominio.net/p/psyverse-manifesto"}, {"id": 94, "name": "pad.freifunk-stuttgart.de", "category": "开源协同 Etherpad", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "Etherpad Import", "desc": "德国斯图加特草根无线网状网络社区基础设施", "url": "https://pad.freifunk-stuttgart.de/p/psyverse-manifesto"}, {"id": 95, "name": "GitHub Pages 独立站", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "自动化部署", "desc": "独立二级域名全球 CDN 加速发布站，极高权威性", "url": "https://gewenbo888.github.io/psyverse-posts/"}, {"id": 96, "name": "jsDelivr Global Open CDN", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "开放 CDN 镜像", "desc": "全球最大开源加速 CDN，秒级同步与原生跨域直连", "url": "https://cdn.jsdelivr.net/gh/gewenbo888/psyverse-posts@psyverse-manifesto-v1/MANIFESTO.md"}, {"id": 97, "name": "Raw GitHub", "category": "极客代码与分发", "lang": "EN", "langLabel": "🌐 英语", "method": "官方原生直连", "desc": "官方超低延迟 Markdown 纯文本直连源文件", "url": "https://raw.githubusercontent.com/gewenbo888/psyverse-posts/main/README.md"}, {"id": 98, "name": "GitHub Release Assets", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "软件发布版本二进制与压缩归档分发 (tar.gz)", "url": "https://github.com/gewenbo888/psyverse-posts/releases/download/v1.1.0/psyverse-manifesto.tar.gz"}, {"id": 99, "name": "GitHub Issue Comments", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "开源开发者实时互动与持续更新评论流锚点", "url": "https://github.com/gewenbo888/psyverse-posts/issues/5#issuecomment-5696515507"}, {"id": 100, "name": "GitHub PR Reviews", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语", "method": "官方 CLI (gh)", "desc": "开源代码评审与公开治理交流流锚点", "url": "https://github.com/gewenbo888/psyverse-posts/pull/6#issuecomment-5696516834"}, {"name": "Product Hunt (Launch)", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "OAuth/首发打榜", "desc": "全球最大新科技与 AI 产品首发打榜阵地，创作者第一曝光池", "url": "https://www.producthunt.com", "id": 101}, {"name": "Toolify.ai", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "目录收录提交", "desc": "全球访问量最大的 AI 工具导航与评测展示社区", "url": "https://www.toolify.ai", "id": 102}, {"name": "Futurepedia", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "权威收录/直投", "desc": "知名 AI 工具索引库，每日推荐前沿 AI 与独立开发产品", "url": "https://www.futurepedia.io", "id": 103}, {"name": "AlternativeTo", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "社区众包发布", "desc": "全球权威软件竞品替代与开源方案讨论社区", "url": "https://alternativeto.net", "id": 104}, {"name": "SaaSHub", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "产品主页认证", "desc": "独立软件与 SaaS 商业化生态展示与对比平台", "url": "https://www.saashub.com", "id": 105}, {"name": "BetaList", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "早期产品首发", "desc": "全球早期科技创新产品与公测版项目首发社区", "url": "https://betalist.com", "id": 106}, {"name": "Uneed.best", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "每日精选打榜", "desc": "独立创作者精选工具榜单，高权重反向链接与极客曝光", "url": "https://www.uneed.best", "id": 107}, {"name": "LaunchingNext", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "初创提交通道", "desc": "全球初创科技产品发布池与独立黑客项目展示", "url": "https://www.launchingnext.com", "id": 108}, {"name": "MicroLaunch", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "微型 SaaS 榜单", "desc": "独立开发者微型项目打榜社区，快速积累早期天使用户", "url": "https://microlaunch.net", "id": 109}, {"name": "There is An AI For That", "category": "AI与产品首发", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "智能匹配推荐", "desc": "全球最大 AI 解决方案搜索引擎与独立工具库", "url": "https://theresanaiforthat.com", "id": 110}, {"name": "Lobste.rs", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "邀请制极客论坛", "desc": "高信噪比计算机系统工程、架构与深度代码分享社区", "url": "https://lobste.rs", "id": 111}, {"name": "Slashdot", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "News for Nerds", "desc": "互联网远祖级极客新闻社区，全球资深系统工程师聚合地", "url": "https://slashdot.org", "id": 112}, {"name": "DZone", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "技术专栏发布", "desc": "全球企业级软件工程架构、微服务与云原生白皮书社区", "url": "https://dzone.com", "id": 113}, {"name": "Hugging Face Hub", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Space / 社区研讨", "desc": "全球开源 AI 模型、数据集与前沿深度学习讨论的中央枢纽", "url": "https://huggingface.co", "id": 114}, {"name": "Kaggle Discussions", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "数据科学论坛", "desc": "全球机器学习、数据科学与 AI 竞赛核心技术探讨区", "url": "https://www.kaggle.com/discussions", "id": 115}, {"name": "FreeCodeCamp Community", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Discourse 原生", "desc": "全球最大开源编程学习社区，数百万开发者活跃交流", "url": "https://forum.freecodecamp.org", "id": 116}, {"name": "CodeProject", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "工程长文提交", "desc": "老牌软件工程社区，涵盖系统底层、C/C++ 与全栈架构", "url": "https://www.codeproject.com", "id": 117}, {"name": "SitePoint Community", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Web 极客论坛", "desc": "专注于现代 Web 开发、设计与开源技术的前沿社区", "url": "https://www.sitepoint.com/community", "id": 118}, {"name": "XDA Developers", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "系统极客论坛", "desc": "全球最著名移动操作系统底层、ROM 与 Linux 极客社区", "url": "https://xdaforums.com", "id": 119}, {"name": "BleepingComputer", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "安全分析发布", "desc": "全球知名计算机安全、系统补丁与漏洞防御技术权威社区", "url": "https://www.bleepingcomputer.com", "id": 120}, {"name": "Linus Tech Tips Forum", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "消费级科技大盘", "desc": "全球最大消费级硬件、DIY 与数码科技极客论坛", "url": "https://linustechtips.com", "id": 121}, {"name": "MacRumors Forums", "category": "全球社交与论坛", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Apple 极客论坛", "desc": "全球顶级 Apple 生态、macOS/iOS 底层与硬件讨论区", "url": "https://forums.macrumors.com", "id": 122}, {"name": "Farcaster / Warpcast", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Hub 广播 / FC API", "desc": "以太坊生态顶级 Crypto/AI 开发者去中心化社交网络", "url": "https://warpcast.com", "id": 123}, {"name": "Lens Protocol / Hey", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Lens API / 链上图谱", "desc": "去中心化社交图谱协议核心前端，创作者所有权网络", "url": "https://hey.xyz", "id": 124}, {"name": "DeBank Stream", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Web3 链上原生流", "desc": "基于链上资产与智能合约的高净值 Web3 社交流", "url": "https://debank.com/stream", "id": 125}, {"name": "Damus / Nostr", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "BIP-340 密钥中继", "desc": "全球抗审查去中心化客户端，闪电网络与开放协议原生", "url": "https://damus.io", "id": 126}, {"name": "Galxe Community", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Web3 凭证网络", "desc": "全球最大 Web3 任务、凭证与社区增长枢纽", "url": "https://galxe.com", "id": 127}, {"name": "Zealy", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "社区互动布道", "desc": "下一代 Web3 与开源社群参与式互动协作平台", "url": "https://zealy.io", "id": 128}, {"name": "CoinMarketCap Community", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "加密资产讨论区", "desc": "全球最大加密货币行情平台内嵌的投资者高频交流池", "url": "https://coinmarketcap.com/community", "id": 129}, {"name": "TradingView Ideas", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Pine Script / 观点", "desc": "全球顶级量化交易、宏观金融与科技图表分析平台", "url": "https://www.tradingview.com", "id": 130}, {"name": "Ethereum Magicians", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "Discourse EIP 哲学", "desc": "以太坊底层改进提案 (EIP)、协议治理与技术研讨", "url": "https://ethereum-magicians.org", "id": 131}, {"name": "Snapshot Governance", "category": "去中心化与抗审查", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "无 Gas 链下治理", "desc": "全球顶级去中心化自治组织 (DAO) 治理与提案共识平台", "url": "https://snapshot.box", "id": 132}, {"name": "Qiita 专栏", "category": "东亚本土高流量", "lang": "JA", "langLabel": "🇯🇵 日语", "method": "Qiita Markdown API", "desc": "日本最大的 IT 工程师技术博客与专业知识沉淀中心", "url": "https://qiita.com", "id": 133}, {"name": "Zenn 开发者社区", "category": "东亚本土高流量", "lang": "JA", "langLabel": "🇯🇵 日语", "method": "GitHub 仓库联动", "desc": "日本现代化高品质技术创作者分享社区，支持 GitHub 发布", "url": "https://zenn.dev", "id": 134}, {"name": "Hatena Bookmark", "category": "东亚本土高流量", "lang": "JA", "langLabel": "🇯🇵 日语", "method": "B! 聚合风向标", "desc": "日本最具影响力的社交书签与互联网舆论风向标", "url": "https://b.hatena.ne.jp", "id": 135}, {"name": "note.com 创作池", "category": "东亚本土高流量", "lang": "JA", "langLabel": "🇯🇵 日语", "method": "富文本长文发布", "desc": "日本最大的创作者长文、随笔与商业知识出版平台", "url": "https://note.com", "id": 136}, {"name": "Yahoo! 知恵袋", "category": "东亚本土高流量", "lang": "JA", "langLabel": "🇯🇵 日语", "method": "本土知识问答", "desc": "日本第一大本土问答与知识检索社区，搜索引擎超高权重", "url": "https://chiebukuro.yahoo.co.jp", "id": 137}, {"name": "Velog 技术博客", "category": "东亚本土高流量", "lang": "KO", "langLabel": "🇰🇷 韩语", "method": "Velog Markdown", "desc": "韩国最受欢迎的现代开发者极客专栏与技术生活平台", "url": "https://velog.io", "id": 138}, {"name": "Brunch Story", "category": "东亚本土高流量", "lang": "KO", "langLabel": "🇰🇷 韩语", "method": "Kakao 写作出版", "desc": "韩国 Kakao 旗下最高品质深度写作与知识出版阵地", "url": "https://brunch.co.kr", "id": 139}, {"name": "Naver Blog", "category": "东亚本土高流量", "lang": "KO", "langLabel": "🇰🇷 韩语", "method": "Naver 引擎直通", "desc": "韩国第一大搜索引擎旗下的国民级博客与内容生态", "url": "https://section.blog.naver.com", "id": 140}, {"name": "DC Inside", "category": "东亚本土高流量", "lang": "KO", "langLabel": "🇰🇷 韩语", "method": "本土百万人气板块", "desc": "韩国规模最庞大的本土网络社区与综合兴趣讨论区", "url": "https://www.dcinside.com", "id": 141}, {"name": "PTT 批踢踢实业坊", "category": "东亚本土高流量", "lang": "ZH", "langLabel": "🇨🇳 中文/港台", "method": "Telnet/SSH 终端", "desc": "台湾历史最悠久、影响力最大的原生 BBS 极客社群", "url": "https://www.ptt.cc", "id": 142}, {"name": "Dcard", "category": "东亚本土高流量", "lang": "ZH", "langLabel": "🇨🇳 中文/港台", "method": "年轻代移动论坛", "desc": "台湾与泛华语年轻代主流社交与各领域深度交流社区", "url": "https://www.dcard.tw", "id": 143}, {"name": "Mobile01", "category": "东亚本土高流量", "lang": "ZH", "langLabel": "🇨🇳 中文/港台", "method": "数码科技第一站", "desc": "台湾科技数码、硬件折腾与生活消费第一综合论坛", "url": "https://www.mobile01.com", "id": 144}, {"name": "巴哈姆特 Bahamut", "category": "东亚本土高流量", "lang": "ZH", "langLabel": "🇨🇳 中文/港台", "method": "哈啦区互动", "desc": "台湾最大 ACG、数码科技与泛流行文化极客论坛", "url": "https://www.gamer.com.tw", "id": 145}, {"name": "LowYat.net", "category": "东亚本土高流量", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "东南亚英文大盘", "desc": "马来西亚及东南亚最大英文科技、数码与商业讨论区", "url": "https://forum.lowyat.net", "id": 146}, {"name": "Kaskus", "category": "东亚本土高流量", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "印尼第一大社区", "desc": "印尼最大综合论坛与科技创新讨论区", "url": "https://www.kaskus.co.id", "id": 147}, {"name": "Pantip", "category": "东亚本土高流量", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "泰国国民论坛", "desc": "泰国最具影响力的本土综合知识问答与深度论坛", "url": "https://pantip.com", "id": 148}, {"name": "Habr", "category": "欧洲与西语社区", "lang": "RU", "langLabel": "🇷🇺 俄语/东欧", "method": "极客长文发布", "desc": "东欧与俄语区最顶级硬核 IT、软件工程与科技长文阵地", "url": "https://habr.com", "id": 149}, {"name": "Pikabu", "category": "欧洲与西语社区", "lang": "RU", "langLabel": "🇷🇺 俄语/东欧", "method": "图文论坛直发", "desc": "东欧高活跃综合图文与科技生活长篇社区", "url": "https://pikabu.ru", "id": 150}, {"name": "Menéame", "category": "欧洲与西语社区", "lang": "ES", "langLabel": "🇪🇸 西班牙语", "method": "西语社交投票", "desc": "西班牙与拉美最顶级极客新闻聚合与深度探讨社区", "url": "https://www.meneame.net", "id": 151}, {"name": "ForoCoches", "category": "欧洲与西语社区", "lang": "ES", "langLabel": "🇪🇸 西班牙语", "method": "西语第一论坛", "desc": "西班牙语世界规模最大、活跃度极高的综合论坛", "url": "https://www.forocoches.com", "id": 152}, {"name": "Taringa!", "category": "欧洲与西语社区", "lang": "ES", "langLabel": "🇪🇸 西班牙语", "method": "拉美知识社群", "desc": "拉美西语世界老牌数字文化与知识分发网络", "url": "https://www.taringa.net", "id": 153}, {"name": "Wykop.pl", "category": "欧洲与西语社区", "lang": "EN", "langLabel": "🌐 英语/波兰", "method": "波兰微社交主站", "desc": "波兰最大科技与社会话题聚合论坛（波兰版 Reddit）", "url": "https://wykop.pl", "id": 154}, {"name": "Heise Online / Telepolis", "category": "欧洲与西语社区", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "德国科技媒体", "desc": "德国最权威的硬核 IT 技术、开源协议与数字文化社区", "url": "https://www.heise.de", "id": 155}, {"name": "Golem.de", "category": "欧洲与西语社区", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "德语专业 IT", "desc": "德国专业软件架构、网络基础设施与开源社区", "url": "https://www.golem.de", "id": 156}, {"name": "Jeuxvideo.com Forums", "category": "欧洲与西语社区", "lang": "FR", "langLabel": "🇫🇷 法语", "method": "法国极客大盘", "desc": "法国最大本土泛科技、数码与青年文化讨论社区", "url": "https://www.jeuxvideo.com/forums.htm", "id": 157}, {"name": "Tweakers.net", "category": "欧洲与西语社区", "lang": "NL", "langLabel": "🇳🇱 荷兰语", "method": "荷兰顶级硬件站", "desc": "荷兰与低地国家最大硬件极客与系统技术讨论区", "url": "https://tweakers.net", "id": 158}, {"name": "SweClockers", "category": "欧洲与西语社区", "lang": "EN", "langLabel": "🌐 英语/北欧", "method": "北欧极客论坛", "desc": "瑞典与北欧地区最受欢迎的 PC 硬件与底层架构论坛", "url": "https://www.sweclockers.com", "id": 159}, {"name": "Hardwareluxx", "category": "欧洲与西语社区", "lang": "DE", "langLabel": "🇩🇪 德语", "method": "欧洲专业硬件", "desc": "德语区顶级硬件与极端性能调优极客社区", "url": "https://www.hardwareluxx.de", "id": 160}, {"name": "Alignment Forum", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "前沿理论长文", "desc": "全球通用人工智能 (AGI) 对齐与认知安全最权威学术阵地", "url": "https://www.alignmentforum.org", "id": 161}, {"name": "Effective Altruism Forum", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "理性主义探讨", "desc": "全球有效利他主义、长远主义与前沿战略哲学社区", "url": "https://forum.effectivealtruism.org", "id": 162}, {"name": "ResearchGate", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "学者社交网络", "desc": "全球学者与科研人员论文发布、学术研讨与交流网络", "url": "https://www.researchgate.net", "id": 163}, {"name": "Academia.edu", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "学术论文分发", "desc": "全球数千万科研人员使用的学术前沿论文分发平台", "url": "https://www.academia.edu", "id": 164}, {"name": "PhilPapers", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "哲学索引网络", "desc": "全球当代哲学、认知科学与意识哲学最权威索引与研讨区", "url": "https://philpapers.org", "id": 165}, {"name": "Papers with Code", "category": "认知科学与前沿研究", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "论文代码评测", "desc": "全球 AI 论文、复现代码与基准评测综合权威平台", "url": "https://paperswithcode.com", "id": 166}, {"name": "Ghost", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "独立 Newsletter", "desc": "全球知名现代开源独立出版系统，原生支持会员订阅", "url": "https://ghost.org", "id": 167}, {"name": "Buttondown Pro", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "极简邮件发行", "desc": "专注极简风格与开发者友好的 Newsletter 发行网络", "url": "https://buttondown.email", "id": 168}, {"name": "Podbean", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "全球播客托管", "desc": "全球老牌多语言播客托管平台，秒级分发至各大音频网", "url": "https://www.podbean.com", "id": 169}, {"name": "Castbox", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "多语言音频分发", "desc": "全球数千万用户的多语言音频与播客聚合收听社区", "url": "https://castbox.fm", "id": 170}, {"name": "SoundCloud", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "独立音轨社区", "desc": "全球独立音乐人与概念音频实验发布网络", "url": "https://soundcloud.com", "id": 171}, {"name": "Bandcamp", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "数字创作分发", "desc": "全球独立艺术家与创作者数字出版直连生态", "url": "https://bandcamp.com", "id": 172}, {"name": "Notion Sites / Super.so", "category": "独立博客与出版", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "无头知识库发布", "desc": "基于 Notion 架构的现代知识库与公开数字花园矩阵", "url": "https://super.so", "id": 173}, {"name": "GitBook", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "技术文档发布", "desc": "现代工程团队技术规范与开源知识库权威托管", "url": "https://www.gitbook.com", "id": 174}, {"name": "Readme.io", "category": "顶级开发者生态", "lang": "EN", "langLabel": "🌐 英语/国际", "method": "交互式 API 文档", "desc": "全球顶级开发者交互式 API 文档与技术社区中心", "url": "https://readme.com", "id": 175}];
     const twitterAccounts = [{"id": 1, "handle": "@SkyGazer1238578", "role": "矩阵账号", "email": "3955188687@qq.com", "browser": "WENBO", "note": "", "url": "https://x.com/SkyGazer1238578"}, {"id": 2, "handle": "@RustyProofs", "role": "矩阵账号", "email": "", "browser": "safiri", "note": "", "url": "https://x.com/RustyProofs"}, {"id": 3, "handle": "@Gobiman8", "role": "矩阵账号", "email": "", "browser": "safiri", "note": "", "url": "https://x.com/Gobiman8"}, {"id": 4, "handle": "@ZKLabs185173", "role": "矩阵账号", "email": "", "browser": "safiri", "note": "", "url": "https://x.com/ZKLabs185173"}, {"id": 5, "handle": "@TheFreeMindCode", "role": "核心思想/代码号", "email": "", "browser": "safiri", "note": "", "url": "https://x.com/TheFreeMindCode"}, {"id": 6, "handle": "@MerkleSonata", "role": "矩阵账号", "email": "", "browser": "safiri", "note": "", "url": "https://x.com/MerkleSonata"}, {"id": 7, "handle": "@gewenbo8", "role": "矩阵账号", "email": "", "browser": "wenbo", "note": "", "url": "https://x.com/gewenbo8"}, {"id": 8, "handle": "@TrustlessX", "role": "商务/科技核心主号", "email": "", "browser": "wenbo", "note": "", "url": "https://x.com/TrustlessX"}, {"id": 9, "handle": "@ZenDaoFlow", "role": "矩阵账号", "email": "", "browser": "wenbo", "note": "", "url": "https://x.com/ZenDaoFlow"}, {"id": 10, "handle": "@Gesuyu8", "role": "儿子成长记录主号", "email": "", "browser": "wenbo", "note": "", "url": "https://x.com/Gesuyu8"}, {"id": 11, "handle": "@RealMemeTitan", "role": "矩阵账号", "email": "", "browser": "wenbo", "note": "oasqedpsy2026", "url": "https://x.com/RealMemeTitan"}, {"id": 12, "handle": "@RoboDoge420", "role": "矩阵账号", "email": "", "browser": "2024", "note": "", "url": "https://x.com/RoboDoge420"}, {"id": 13, "handle": "@zkDogeFi", "role": "矩阵账号", "email": "", "browser": "2024", "note": "", "url": "https://x.com/zkDogeFi"}, {"id": 14, "handle": "@RealWorldCry", "role": "矩阵账号", "email": "", "browser": "2024", "note": "", "url": "https://x.com/RealWorldCry"}, {"id": 15, "handle": "@SelfRuleNow", "role": "矩阵账号", "email": "", "browser": "2024", "note": "", "url": "https://x.com/SelfRuleNow"}, {"id": 16, "handle": "@Gobiironman", "role": "矩阵账号", "email": "", "browser": "2024", "note": "", "url": "https://x.com/Gobiironman"}, {"id": 17, "handle": "@DataVeil1", "role": "矩阵账号", "email": "gewenbo88@foxmail.com", "browser": "WENBO", "note": "", "url": "https://x.com/DataVeil1"}, {"id": 18, "handle": "@TrueFreedo64097", "role": "矩阵账号", "email": "trustlessx@qq.com", "browser": "WENBO", "note": "", "url": "https://x.com/TrueFreedo64097"}, {"id": 19, "handle": "@FreeLove24061", "role": "矩阵账号", "email": "zklabs@foxmail.com", "browser": "WENBO", "note": "", "url": "https://x.com/FreeLove24061"}, {"id": 20, "handle": "@SkyGazer963", "role": "矩阵账号", "email": "agenticweb3@qq.com", "browser": "WENBO", "note": "", "url": "https://x.com/SkyGazer963"}, {"id": 21, "handle": "@SkylineDre65280", "role": "矩阵账号", "email": "agenticblockchain@foxmail.com", "browser": "WENBO", "note": "", "url": "https://x.com/SkylineDre65280"}, {"id": 22, "handle": "@TaoOfWaterP", "role": "矩阵账号", "email": "gewenbo11@qq.com", "browser": "Wenbo dopemusic", "note": "", "url": "https://x.com/TaoOfWaterP"}, {"id": 23, "handle": "@endlesszkp", "role": "矩阵账号", "email": "3391394064@qq.com", "browser": "Wenbo dopemusic", "note": "", "url": "https://x.com/endlesszkp"}, {"id": 24, "handle": "@DecentralLiber", "role": "矩阵账号", "email": "natureted@qq.com", "browser": "Wenbo dopemusic", "note": "", "url": "https://x.com/DecentralLiber"}, {"id": 25, "handle": "@Nichetomainstre", "role": "矩阵账号", "email": "natureted@foxmail.com", "browser": "Wenbo dopemusic", "note": "", "url": "https://x.com/Nichetomainstre"}, {"id": 26, "handle": "@strings_co34068", "role": "矩阵账号", "email": "", "browser": "Wenbo dopemusic", "note": "", "url": "https://x.com/strings_co34068"}, {"id": 27, "handle": "@BooleanMind1", "role": "矩阵账号", "email": "485821605@qq.com", "browser": "wenbo(dope)", "note": "", "url": "https://x.com/BooleanMind1"}, {"id": 28, "handle": "@SimpleTruthO", "role": "矩阵账号", "email": "a485821605@qq.com", "browser": "wenbo(dope)", "note": "", "url": "https://x.com/SimpleTruthO"}, {"id": 29, "handle": "@OneAboveAllp", "role": "矩阵账号", "email": "abc4858216@foxmail.com", "browser": "wenbo(dope)", "note": "", "url": "https://x.com/OneAboveAllp"}, {"id": 30, "handle": "@LibProsper", "role": "矩阵账号", "email": "743941591@qq.com", "browser": "wenbo(dope)", "note": "", "url": "https://x.com/LibProsper"}, {"id": 31, "handle": "@Numverse141145", "role": "矩阵账号", "email": "abc7439415@qq.com", "browser": "wenbo(dope)", "note": "", "url": "https://x.com/Numverse141145"}, {"id": 32, "handle": "@all_once41738", "role": "矩阵账号", "email": "abc7439415@foxmail.com", "browser": "wenbo(brytehall.com)", "note": "", "url": "https://x.com/all_once41738"}, {"id": 33, "handle": "@EntropyExplorer", "role": "矩阵账号", "email": "1040926609@qq.com", "browser": "wenbo(brytehall.com)", "note": "", "url": "https://x.com/EntropyExplorer"}, {"id": 34, "handle": "@DataverseC54253", "role": "矩阵账号", "email": "abc1040926@qq.com", "browser": "wenbo(brytehall.com)", "note": "", "url": "https://x.com/DataverseC54253"}, {"id": 35, "handle": "@matrix_min18516", "role": "矩阵账号", "email": "abc1040926@foxmail.com", "browser": "wenbo(brytehall.com)", "note": "", "url": "https://x.com/matrix_min18516"}, {"id": 36, "handle": "@CosmicCode95090", "role": "矩阵账号", "email": "1280074583@qq.com", "browser": "wenbo(brytehall.com)", "note": "", "url": "https://x.com/CosmicCode95090"}, {"id": 37, "handle": "@SimplicityNexus", "role": "矩阵账号", "email": "gewenbo45@qq.com", "browser": "Dope", "note": "", "url": "https://x.com/SimplicityNexus"}, {"id": 38, "handle": "@freesphereA", "role": "矩阵账号", "email": "gewenbo166@foxmail.com", "browser": "Dope", "note": "", "url": "https://x.com/freesphereA"}, {"id": 39, "handle": "@ActWithHeartA", "role": "矩阵账号", "email": "2148159027@qq.com", "browser": "Dope", "note": "", "url": "https://x.com/ActWithHeartA"}, {"id": 40, "handle": "@PeopleFirstW", "role": "矩阵账号", "email": "gewenbo88888@qq.com", "browser": "Dope", "note": "", "url": "https://x.com/PeopleFirstW"}, {"id": 41, "handle": "@OperatorPlanet", "role": "矩阵账号", "email": "gewenbo222@foxmail.com", "browser": "Dope", "note": "", "url": "https://x.com/OperatorPlanet"}, {"id": 42, "handle": "@ZKTechTalks", "role": "矩阵账号", "email": "3278668706@qq.com", "browser": "wenbo(文波)", "note": "", "url": "https://x.com/ZKTechTalks"}, {"id": 43, "handle": "@YQuest69295", "role": "矩阵账号", "email": "a327866870@qq.com", "browser": "wenbo(文波)", "note": "", "url": "https://x.com/YQuest69295"}, {"id": 44, "handle": "@TokenGamerA", "role": "矩阵账号", "email": "abc3278668@foxmail.com", "browser": "wenbo(文波)", "note": "", "url": "https://x.com/TokenGamerA"}, {"id": 45, "handle": "@AbsoluteOneA", "role": "矩阵账号", "email": "", "browser": "wenbo(文波)", "note": "", "url": "https://x.com/AbsoluteOneA"}, {"id": 46, "handle": "@BioFuture_Lab", "role": "矩阵账号", "email": "", "browser": "wenbo(文波)", "note": "", "url": "https://x.com/BioFuture_Lab"}, {"id": 47, "handle": "@chainplayguru", "role": "矩阵账号", "email": "", "browser": "wenbo(gewenbowenbo)", "note": "", "url": "https://x.com/chainplayguru"}, {"id": 48, "handle": "@SuperTechTre", "role": "矩阵账号", "email": "3623451391@qq.com", "browser": "wenbo(gewenbowenbo)", "note": "", "url": "https://x.com/SuperTechTre"}, {"id": 49, "handle": "@NanoVerseI", "role": "矩阵账号", "email": "gewenbo88234@qq.com", "browser": "wenbo(gewenbowenbo)", "note": "", "url": "https://x.com/NanoVerseI"}, {"id": 50, "handle": "@QuantumDotQ", "role": "矩阵账号", "email": "gewenbo8811@foxmail.com", "browser": "wenbo(gewenbowenbo)", "note": "", "url": "https://x.com/QuantumDotQ"}, {"id": 51, "handle": "@NEdge24164", "role": "矩阵账号", "email": "", "browser": "wenbo(gewenbowenbo)", "note": "", "url": "https://x.com/NEdge24164"}, {"id": 52, "handle": "@DHarmony27088", "role": "矩阵账号", "email": "gewenbowenbo@qq.com", "browser": "gamefi", "note": "", "url": "https://x.com/DHarmony27088"}, {"id": 53, "handle": "@simply55151", "role": "矩阵账号", "email": "", "browser": "gamefi", "note": "", "url": "https://x.com/simply55151"}, {"id": 54, "handle": "@STaoist64783", "role": "矩阵账号", "email": "+852 6055 4872\ngeirge@163.com", "browser": "gamefi", "note": "", "url": "https://x.com/STaoist64783"}, {"id": 55, "handle": "@SpontaneouA", "role": "矩阵账号", "email": "", "browser": "gamefi", "note": "", "url": "https://x.com/SpontaneouA"}, {"id": 56, "handle": "@CheckpointTree", "role": "矩阵账号", "email": "", "browser": "wenbo(Psy)", "note": "", "url": "https://x.com/CheckpointTree"}, {"id": 57, "handle": "@libertarianweb3", "role": "Web3/开源旗舰号", "email": "libertarianweb3@gmail.com", "browser": "libertarianweb3", "note": "", "url": "https://x.com/libertarianweb3"}];
-    const manifestos = {"FR": {"title": "Le Code Source : La Logique Fondamentale de la Civilisation Technologique", "nodes": "14 大法国权威开源节点 (Framapad, Chapril, LQDN, Infini 等)", "content": "La civilisation technologique humaine traverse son changement de paradigme le plus profond : le passage d'une intuition biologique basée sur le carbone à des systèmes adaptatifs sur silicium, pilotés par des algorithmes, des données multidimensionnelles et la puissance de calcul. Derrière la course aux modèles et aux agents autonomes se pose une question fondamentale : existe-t-il un système d'exploitation sous-jacent unifiant réalité physique et émergence de l'intelligence ? Les 16 Chapitres du Code Source présentés par psyverse.fun apportent une feuille de route pour les créateurs, ingénieurs et chercheurs explorant de nouveaux horizons."}, "DE": {"title": "Der Quellcode: Die fundamentale Logik der technologischen Zivilisation", "nodes": "3 大德国与奥地利权威节点 (Stratum 0 CCC, Piratenpartei AT, Freifunk)", "content": "Die menschliche technologische Zivilisation durchläuft ihren tiefgreifendsten Paradigmenwechsel: den Übergang von kohlenstoffbasierter biologischer Intuition zu selbstadaptiven Siliziumsystemen, angetrieben durch Algorithmen und massive Rechenleistung. Hinter der Modellskalierung und Multi-Agenten-Orchestrierung steht eine grundlegende Frage: Gibt es ein einheitliches Betriebssystem, das sowohl die physische Realität als auch die emergente Maschinenintelligenz bestimmt? Die 16 Kapitel des Quellcodes auf psyverse.fun dekonstruieren diese Frage und bieten eine evolutionäre Orientierung für Schöpfer und Suchende."}, "ES": {"title": "El Código Fuente: La Lógica Fundamental de la Civilización Tecnológica", "nodes": "SinDominio 西班牙自治网络 (创立于 1999 年)", "content": "La civilización tecnológica humana está experimentando su cambio de paradigma más profundo: la transición de la intuición biológica basada en el carbono a sistemas adaptativos de silicio, impulsados por algoritmos y computación de alta dimensión. Más allá de los modelos y los agentes autónomos, surge una pregunta fundamental: ¿existe un sistema operativo subyacente unificado que rija la realidad física y la inteligencia de las máquinas? Los 16 Capítulos del Código Fuente en psyverse.fun presentan una hoja de ruta evolutiva para creadores, ingenieros y exploradores."}, "NL": {"title": "De Broncode: De Fundamentele Logica van de Technologische Beschaving", "nodes": "Puscii 荷兰乌特勒支自治网络技术集体", "content": "De menselijke technologische beschaving ondergaat haar meest diepgaande paradigmaverschuiving: de overgang van koolstofgebaseerde biologische intuïtie naar zelflerende siliciumsystemen, aangedreven door algoritmen en rekenkracht. Achter modelparameters en agentenorkestratie schuilt een fundamentele vraag: bestaat er een uniform onderliggend besturingssysteem voor zowel de fysieke realiteit als de opkomende machinale intelligentie? De 16 Hoofdstukken van de Broncode op psyverse.fun bieden een evolutionaire leidraad voor scheppers en zoekers."}, "EN": {"title": "Source Code: The Fundamental Logic of Technological Civilization", "nodes": "GitHub 全生态、Bluesky、Nostr NIP-23、Telegraph、维基媒体、Riseup 等 81 个国际节点", "content": "Human technological civilization is undergoing its most profound paradigm shift: transitioning from carbon-based biological intuition to self-adaptive silicon systems driven by algorithms, high-dimensional data, and computation. Behind model parameters, agent orchestration, and frontier engineering lies a fundamental question: Is there a unified underlying operating system governing both physical reality and emergent machine intelligence? The 16 Chapters of Source Code presented by psyverse.fun deconstructs and reframes this ultimate question as an evolutionary chart for creators, engineers, and seekers."}};
+    const manifestos = {"FR": {"title": "Le Code Source : La Logique Fondamentale de la Civilisation Technologique", "nodes": "15 大法国权威开源与科技节点 (Framapad, Chapril, LQDN, Infini, JVC 等)", "content": "La civilisation technologique humaine traverse son changement de paradigme le plus profond : le passage d'une intuition biologique basée sur le carbone à des systèmes adaptatifs sur silicium, pilotés par des algorithmes, des données multidimensionnelles et la puissance de calcul. Derrière la course aux modèles et aux agents autonomes se pose une question fondamentale : existe-t-il un système d'exploitation sous-jacent unifiant réalité physique et émergence de l'intelligence ? Les 16 Chapitres du Code Source présentés par psyverse.fun apportent une feuille de route pour les créateurs, ingénieurs et chercheurs explorant de nouveaux horizons."}, "DE": {"title": "Der Quellcode: Die fundamentale Logik der technologischen Zivilisation", "nodes": "6 大德语权威节点 (Heise, Golem, Stratum 0 CCC, Hardwareluxx, Piratenpartei AT, Freifunk)", "content": "Die menschliche technologische Zivilisation durchläuft ihren tiefgreifendsten Paradigmenwechsel: den Übergang von kohlenstoffbasierter biologischer Intuition zu selbstadaptiven Siliziumsystemen, angetrieben durch Algorithmen und massive Rechenleistung. Hinter der Modellskalierung und Multi-Agenten-Orchestrierung steht eine grundlegende Frage: Gibt es ein einheitliches Betriebssystem, das sowohl die physische Realität als auch die emergente Maschinenintelligenz bestimmt? Die 16 Kapitel des Quellcodes auf psyverse.fun dekonstruieren diese Frage und bieten eine evolutionäre Orientierung für Schöpfer und Suchende."}, "JA": {"title": "ソースコード：技術文明の根底にある論理と知能の進化", "nodes": "5 大日本本土技術ノード (Qiita, Zenn, はてなブックマーク, note.com, Yahoo!知恵袋)", "content": "人類の技術文明は今、炭素ベースの生物学的直観から、アルゴリズムと高次元計算に基づく自己適応型シリコンシステムへの歴史的転換期を迎えています。モデルや自律エージェントの競争の深層にある根本的な問い：物理的現実と機械知能の創発を統括する統一OSは存在するのか？psyverse.fun のソースコード16章は、未知を探求する創作者と研究者のための進化の羅針盤を提示します。"}, "KO": {"title": "소스 코드: 기술 문명의 기저 논리와 지능의 진화 경로", "nodes": "4 大韩国本土顶流阵地 (Velog, Brunch Story, Naver Blog, DC Inside)", "content": "인류의 기술 문명은 탄소 기반 생물학적 직관에서 알고리즘과 고차원 연산으로 구동되는 자기적응형 실리콘 시스템으로의 심오한 패러다임 전환을 겪고 있습니다. 자율 에이전트와 지능의 폭발 속에서 제기되는 궁극의 질문: 물리적 현실과 인공지능 창발을 아우르는 통일된 운영체제가 존재하는가? psyverse.fun의 소스 코드 16장은 탐구자와 창작자를 위한 진화적 나침반을 제공합니다."}, "ES": {"title": "El Código Fuente: La Lógica Fundamental de la Civilización Tecnológica", "nodes": "4 大西语世界顶级阵地 (Menéame, ForoCoches, Taringa!, SinDominio)", "content": "La civilización tecnológica humana está experimentando su cambio de paradigma más profundo: la transición de la intuición biológica basada en el carbono a sistemas adaptativos de silicio, impulsados por algoritmos y computación de alta dimensión. Más allá de los modelos y los agentes autónomos, surge una pregunta fundamental: ¿existe un sistema operativo subyacente unificado que rija la realidad física y la inteligencia de las máquinas? Los 16 Capítulos del Código Fuente en psyverse.fun presentan una hoja de ruta evolutiva para creadores, ingenieros y exploradores."}, "RU": {"title": "Исходный код: Фундаментальная логика технологической цивилизации", "nodes": "2 大东欧极客顶流阵地 (Habr, Pikabu)", "content": "Технологическая цивилизация переживает глубочайшую смену парадигмы: переход от углеродной биологической интуиции к адаптивным кремниевым системам. За автономией агентов стоит фундаментальный вопрос: существует ли единая операционная система, управляющая реальностью и машинным интеллектом? 16 Глав Исходного кода psyverse.fun представляют карту эволюции для исследователей."}, "NL": {"title": "De Broncode: De Fundamentele Logica van de Technologische Beschaving", "nodes": "2 大荷兰与低地国家权威节点 (Tweakers.net, Puscii 自治技术集体)", "content": "De menselijke technologische beschaving ondergaat haar meest diepgaande paradigmaverschuiving: de overgang van koolstofgebaseerde biologische intuïtie naar zelflerende siliciumsystemen, aangedreven door algoritmen en rekenkracht. Achter modelparameters en agentenorkestratie schuilt een fundamentele vraag: bestaat er een uniform onderliggend besturingssysteem voor zowel de fysieke realiteit als de opkomende machinale intelligentie? De 16 Hoofdstukken van de Broncode op psyverse.fun bieden een evolutionaire leidraad voor scheppers en zoekers."}, "EN": {"title": "Source Code: The Fundamental Logic of Technological Civilization", "nodes": "Product Hunt, Hugging Face, Farcaster, GitHub 全生态、Bluesky、Nostr、Telegraph 等 128 个国际顶级节点", "content": "Human technological civilization is undergoing its most profound paradigm shift: transitioning from carbon-based biological intuition to self-adaptive silicon systems driven by algorithms, high-dimensional data, and computation. Behind model parameters, agent orchestration, and frontier engineering lies a fundamental question: Is there a unified underlying operating system governing both physical reality and emergent machine intelligence? The 16 Chapters of Source Code presented by psyverse.fun deconstructs and reframes this ultimate question as an evolutionary chart for creators, engineers, and seekers."}};
 
     let currentMainView = 'platforms';
     let currentPlatformLang = 'ALL';
@@ -342,23 +385,26 @@
         cPlatforms.classList.remove('hidden');
         cTwitter.classList.add('hidden');
       } else {
-        tabTwitter.className = 'flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-sky-600 text-white shadow-md transition-all';
+        tabTwitter.className = 'flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-sky-500 text-white shadow-md transition-all';
         tabPlatforms.className = 'flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--border)] transition-all';
         cTwitter.classList.remove('hidden');
         cPlatforms.classList.add('hidden');
       }
     }
 
-    // Manifesto Switcher
+    // Switch Manifesto Language Preview
     function switchManifesto(lang) {
       const data = manifestos[lang];
       if (!data) return;
+
       document.getElementById('manifesto-title').textContent = data.title;
       document.getElementById('manifesto-nodes').textContent = data.nodes;
       document.getElementById('manifesto-body').textContent = data.content;
 
-      ['FR', 'DE', 'ES', 'NL', 'EN'].forEach(l => {
+      const langs = ['FR', 'DE', 'JA', 'KO', 'ES', 'RU', 'NL', 'EN'];
+      langs.forEach(l => {
         const btn = document.getElementById('tab-btn-' + l);
+        if (!btn) return;
         if (l === lang) {
           btn.className = 'px-3 py-1 text-xs font-semibold rounded-lg bg-blue-600 text-white transition-all shadow-sm';
         } else {
@@ -367,14 +413,16 @@
       });
     }
 
-    // Platform Filters
+    // Platforms Filter Handlers
     function setLangFilter(lang) {
       currentPlatformLang = lang;
       document.querySelectorAll('.lang-pill').forEach(el => {
         el.className = 'lang-pill px-3 py-1.5 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all';
       });
       const activeBtn = document.getElementById('lang-btn-' + lang);
-      if (activeBtn) activeBtn.className = 'lang-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all shadow-sm';
+      if (activeBtn) {
+        activeBtn.className = 'lang-pill px-3 py-1.5 rounded-lg bg-blue-600 text-white font-semibold transition-all shadow-sm';
+      }
       applyPlatformFilters();
     }
 
@@ -383,20 +431,28 @@
       document.querySelectorAll('.cat-pill').forEach(el => {
         el.className = 'cat-pill px-3 py-1 rounded-lg bg-[var(--background)] hover:bg-[var(--border)] text-[var(--foreground)] border border-[var(--border)] transition-all';
       });
-      let btnId = 'cat-btn-ALL';
-      if (cat === '开源协同 Etherpad') btnId = 'cat-btn-pad';
-      else if (cat === '顶级开发者生态') btnId = 'cat-btn-dev';
-      else if (cat === '去中心化与抗审查') btnId = 'cat-btn-decent';
-      else if (cat === '极客代码与分发') btnId = 'cat-btn-paste';
-      else if (cat === '独立博客与出版') btnId = 'cat-btn-blog';
-      else if (cat === '全球社交与论坛') btnId = 'cat-btn-social';
-
+      const catKeyMap = {
+        'ALL': 'cat-btn-ALL',
+        'AI与产品首发': 'cat-btn-ai',
+        '顶级开发者生态': 'cat-btn-dev',
+        '去中心化与抗审查': 'cat-btn-decent',
+        '东亚本土高流量': 'cat-btn-asia',
+        '欧洲与西语社区': 'cat-btn-eu',
+        '认知科学与前沿研究': 'cat-btn-cog',
+        '开源协同 Etherpad': 'cat-btn-pad',
+        '极客代码与分发': 'cat-btn-paste',
+        '独立博客与出版': 'cat-btn-blog',
+        '全球社交与论坛': 'cat-btn-social'
+      };
+      const btnId = catKeyMap[cat];
       const activeBtn = document.getElementById(btnId);
-      if (activeBtn) activeBtn.className = 'cat-pill px-3 py-1 rounded-lg bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 font-semibold transition-all shadow-sm';
+      if (activeBtn) {
+        activeBtn.className = 'cat-pill px-3 py-1 rounded-lg bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 font-semibold transition-all shadow-sm';
+      }
       applyPlatformFilters();
     }
 
-    function renderPlatformsGrid(items) {
+    function renderPlatforms(items) {
       const grid = document.getElementById('platforms-grid');
       const noResults = document.getElementById('no-platform-results');
       document.getElementById('filtered-platform-count').textContent = items.length;
@@ -409,14 +465,28 @@
       noResults.classList.add('hidden');
 
       grid.innerHTML = items.map(p => {
-        const isPad = p.category.includes('Etherpad');
+        const isAI = p.category.includes('AI与产品');
         const isDev = p.category.includes('开发者');
         const isDecent = p.category.includes('去中心化');
+        const isAsia = p.category.includes('东亚本土');
+        const isEU = p.category.includes('欧洲');
+        const isCog = p.category.includes('认知科学');
+        const isPad = p.category.includes('Etherpad');
+        const isPaste = p.category.includes('极客代码');
+        const isBlog = p.category.includes('独立博客');
+        const isSocial = p.category.includes('全球社交');
         
         let catBadgeColor = 'bg-slate-500/10 text-slate-600 dark:text-slate-400 border-slate-500/20';
-        if (isPad) catBadgeColor = 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20';
+        if (isAI) catBadgeColor = 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border-rose-500/20';
         else if (isDev) catBadgeColor = 'bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20';
         else if (isDecent) catBadgeColor = 'bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/20';
+        else if (isAsia) catBadgeColor = 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20';
+        else if (isEU) catBadgeColor = 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20';
+        else if (isCog) catBadgeColor = 'bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/20';
+        else if (isPad) catBadgeColor = 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20';
+        else if (isPaste) catBadgeColor = 'bg-orange-500/10 text-orange-600 dark:text-orange-400 border-orange-500/20';
+        else if (isBlog) catBadgeColor = 'bg-teal-500/10 text-teal-600 dark:text-teal-400 border-teal-500/20';
+        else if (isSocial) catBadgeColor = 'bg-sky-500/10 text-sky-600 dark:text-sky-400 border-sky-500/20';
 
         return `
           <div class="group relative flex flex-col justify-between p-4 rounded-xl bg-[var(--card)] border border-[var(--border)] hover:border-blue-500/40 hover:shadow-lg transition-all duration-200">
@@ -480,22 +550,23 @@
       const query = document.getElementById('platform-search-input').value.trim().toLowerCase();
       const filtered = platforms.filter(p => {
         const matchesQuery = !query || 
-          p.name.toLowerCase().includes(query) ||
-          p.desc.toLowerCase().includes(query) ||
-          p.category.toLowerCase().includes(query) ||
-          p.langLabel.toLowerCase().includes(query) ||
-          p.method.toLowerCase().includes(query) ||
+          p.name.toLowerCase().includes(query) || 
+          p.desc.toLowerCase().includes(query) || 
+          p.category.toLowerCase().includes(query) || 
+          p.langLabel.toLowerCase().includes(query) || 
+          p.method.toLowerCase().includes(query) || 
           p.url.toLowerCase().includes(query);
 
         const matchesLang = currentPlatformLang === 'ALL' || p.lang === currentPlatformLang;
         const matchesCat = currentPlatformCat === 'ALL' || p.category === currentPlatformCat;
+
         return matchesQuery && matchesLang && matchesCat;
       });
-      renderPlatformsGrid(filtered);
+      renderPlatforms(filtered);
     }
 
-    // ==================== TWITTER MATRIX LOGIC ====================
-    function initTwitterFilters() {
+    // Twitter View Logic
+    function renderTwitterBrowserFilters() {
       const container = document.getElementById('twitter-browser-filters');
       const browsers = ['ALL'];
       twitterAccounts.forEach(a => {
@@ -503,29 +574,33 @@
         if (!browsers.includes(b)) browsers.push(b);
       });
 
-      container.innerHTML = `
-        <span class="text-[var(--muted-foreground)] whitespace-nowrap mr-1">浏览器环境:</span>
-        ` + browsers.map(b => {
-          const count = b === 'ALL' ? twitterAccounts.length : twitterAccounts.filter(a => (a.browser || '未指定').trim() === b).length;
-          return `
-            <button 
-              onclick="setTwitterBrowserFilter('${b}')" 
-              id="tw-browser-btn-${b.replace(/[^a-zA-Z0-9]/g, '_')}" 
-              class="tw-browser-pill px-2.5 py-1 rounded-lg ${b === 'ALL' ? 'bg-sky-600 text-white font-bold' : 'bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--border)]'} transition-all whitespace-nowrap"
-            >
-              ${b} (${count})
-            </button>
-          `;
-        }).join('');
+      container.innerHTML = browsers.map(b => {
+        const isAll = b === 'ALL';
+        const label = isAll ? '全部环境' : b;
+        const count = b === 'ALL' ? twitterAccounts.length : twitterAccounts.filter(a => (a.browser || '未指定').trim() === b).length;
+        const activeClass = isAll ? 'bg-sky-500 text-white font-semibold shadow-sm' : 'bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--border)] border border-[var(--border)]';
+
+        return `
+          <button 
+            onclick="setTwitterBrowserFilter('${b}')" 
+            id="tw-browser-btn-${b.replace(/[^a-zA-Z0-9]/g, '_')}"
+            class="tw-browser-pill px-3 py-1 rounded-lg text-xs transition-all whitespace-nowrap ${activeClass}"
+          >
+            ${label} (${count})
+          </button>
+        `;
+      }).join('');
     }
 
     function setTwitterBrowserFilter(browser) {
       currentTwitterBrowser = browser;
       document.querySelectorAll('.tw-browser-pill').forEach(el => {
-        el.className = 'tw-browser-pill px-2.5 py-1 rounded-lg bg-[var(--background)] text-[var(--foreground)] border border-[var(--border)] hover:bg-[var(--border)] transition-all whitespace-nowrap';
+        el.className = 'tw-browser-pill px-3 py-1 rounded-lg text-xs transition-all whitespace-nowrap bg-[var(--background)] text-[var(--foreground)] hover:bg-[var(--border)] border border-[var(--border)]';
       });
       const activeBtn = document.getElementById('tw-browser-btn-' + browser.replace(/[^a-zA-Z0-9]/g, '_'));
-      if (activeBtn) activeBtn.className = 'tw-browser-pill px-2.5 py-1 rounded-lg bg-sky-600 text-white font-bold transition-all shadow-sm whitespace-nowrap';
+      if (activeBtn) {
+        activeBtn.className = 'tw-browser-pill px-3 py-1 rounded-lg text-xs transition-all whitespace-nowrap bg-sky-500 text-white font-semibold shadow-sm';
+      }
       applyTwitterFilters();
     }
 
@@ -544,64 +619,48 @@
       grid.innerHTML = items.map(a => {
         const isCoreTech = a.handle.toLowerCase() === '@trustlessx';
         const isSonGrowth = a.handle.toLowerCase() === '@gesuyu8';
-        const isWeb3 = a.handle.toLowerCase() === '@libertarianweb3';
-
-        let roleBadge = 'bg-slate-500/10 text-slate-400 border-slate-500/20';
-        let roleText = '🐦 矩阵节点';
+        const isCodeMaster = a.handle.toLowerCase() === '@thefreemindcode';
+        
+        let matrixBadge = '<span class="text-[11px] px-2 py-0.5 rounded-md font-medium bg-slate-500/10 text-slate-400 border border-slate-500/20">矩阵节点</span>';
         if (isCoreTech) {
-          roleBadge = 'bg-blue-500/15 text-blue-400 border-blue-500/30 font-bold';
-          roleText = '🅱️ 商务科技主号';
+          matrixBadge = '<span class="text-[11px] px-2 py-0.5 rounded-md font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">🅱️ 商业/科技核心主号</span>';
         } else if (isSonGrowth) {
-          roleBadge = 'bg-pink-500/15 text-pink-400 border-pink-500/30 font-bold';
-          roleText = '🅰️ 儿子成长主号';
-        } else if (isWeb3) {
-          roleBadge = 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30 font-bold';
-          roleText = '🌐 Web3 旗舰号';
+          matrixBadge = '<span class="text-[11px] px-2 py-0.5 rounded-md font-bold bg-amber-500/10 text-amber-500 border border-amber-500/20">🅰️ 儿子成长主号 (ego lite)</span>';
+        } else if (isCodeMaster) {
+          matrixBadge = '<span class="text-[11px] px-2 py-0.5 rounded-md font-bold bg-purple-500/10 text-purple-500 border border-purple-500/20">🧠 核心思想代码号</span>';
         }
 
-        const emailDisplay = a.email ? a.email : '未记录邮箱';
+        const emailDisplay = a.email ? a.email : '<span class="text-[var(--muted)] italic">未单列 (Session/SSO 免登)</span>';
 
         return `
-          <div class="group relative flex flex-col justify-between p-4 rounded-xl bg-[var(--card)] border border-[var(--border)] hover:border-sky-500/50 hover:shadow-lg transition-all duration-200">
+          <div class="group relative flex flex-col justify-between p-4 rounded-xl bg-[var(--card)] border border-[var(--border)] hover:border-sky-500/40 hover:shadow-lg transition-all duration-200">
             <div>
               <div class="flex items-start justify-between gap-2 mb-2">
-                <div class="flex items-center gap-2.5">
-                  <div class="w-8 h-8 rounded-full bg-sky-500/10 border border-sky-500/20 flex items-center justify-center font-black text-sky-400 text-xs">
-                    ${a.handle.replace('@','').substring(0,2).toUpperCase()}
-                  </div>
+                <div class="flex items-center gap-2">
+                  <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-sky-500/10 border border-sky-500/20 text-xs font-bold text-sky-500">
+                    #${a.id}
+                  </span>
                   <div>
-                    <h4 class="font-bold text-sm text-[var(--foreground)] group-hover:text-sky-400 transition-colors flex items-center gap-1.5">
+                    <h4 class="font-bold text-sm text-[var(--foreground)] group-hover:text-sky-400 transition-colors">
                       ${a.handle}
                     </h4>
-                    <span class="text-[10px] text-[var(--muted-foreground)]">序号 #${a.id}</span>
+                    <span class="text-[11px] text-[var(--muted-foreground)] font-mono">
+                      Profile: <strong class="text-sky-500">${a.browser || '未指定'}</strong>
+                    </span>
                   </div>
                 </div>
-                <span class="text-[10px] px-2 py-0.5 rounded-full border ${roleBadge} whitespace-nowrap">
-                  ${roleText}
-                </span>
+                ${matrixBadge}
               </div>
 
-              <!-- Browser Profile Badge -->
-              <div class="flex flex-wrap items-center gap-1.5 my-2.5">
-                <span class="text-[11px] px-2.5 py-0.5 rounded-md font-medium bg-[var(--background)] border border-[var(--border)] text-sky-400 flex items-center gap-1">
-                  <span>🖥️</span> ${a.browser || '独立配置'}
-                </span>
-                ${a.note ? `<span class="text-[11px] px-2 py-0.5 rounded-md font-medium bg-amber-500/10 text-amber-400 border border-amber-500/20">${a.note}</span>` : ''}
-              </div>
-
-              <!-- Email Block with Copy -->
-              <div class="flex items-center justify-between p-2 rounded-lg bg-[var(--background)]/60 border border-[var(--border)] text-xs text-[var(--muted-foreground)] mb-2">
-                <span class="truncate mr-2 flex items-center gap-1">
-                  <span>✉️</span> ${emailDisplay}
-                </span>
-                ${a.email ? `
-                  <button 
-                    onclick="copyText('${a.email}', this)" 
-                    class="text-[10px] text-sky-400 hover:text-sky-300 px-1.5 py-0.5 rounded bg-[var(--card)] border border-[var(--border)] transition-all whitespace-nowrap"
-                  >
-                    复制邮箱
-                  </button>
-                ` : ''}
+              <div class="my-2 p-2.5 rounded-lg bg-[var(--background)] border border-[var(--border)] text-xs flex flex-col gap-1 font-mono">
+                <div class="flex items-center justify-between text-[var(--muted-foreground)]">
+                  <span>绑定邮箱:</span>
+                  <button onclick="copyText('${a.email || ''}', this)" class="hover:text-[var(--foreground)] text-[10px] underline">复制</button>
+                </div>
+                <div class="text-[var(--foreground)] break-all font-medium">
+                  ${emailDisplay}
+                </div>
+                ${a.note ? `<div class="mt-1 pt-1 border-t border-[var(--border)] text-[10px] text-amber-500 font-normal">备注: ${a.note}</div>` : ''}
               </div>
             </div>
 
@@ -612,7 +671,7 @@
                 rel="noopener noreferrer" 
                 class="inline-flex items-center gap-1 text-xs font-semibold text-sky-400 hover:text-sky-300 hover:underline transition-all"
               >
-                <span>直达 X 个人主页</span>
+                <span>直达 X 主页</span>
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
@@ -632,40 +691,42 @@
     function applyTwitterFilters() {
       const query = document.getElementById('twitter-search-input').value.trim().toLowerCase();
       const filtered = twitterAccounts.filter(a => {
-        const b = (a.browser || '未指定').trim();
-        const matchesBrowser = currentTwitterBrowser === 'ALL' || b === currentTwitterBrowser;
+        const matchesQuery = !query || 
+          a.handle.toLowerCase().includes(query) || 
+          (a.email && a.email.toLowerCase().includes(query)) || 
+          (a.browser && a.browser.toLowerCase().includes(query)) || 
+          (a.note && a.note.toLowerCase().includes(query));
 
-        const matchesQuery = !query ||
-          a.handle.toLowerCase().includes(query) ||
-          (a.email && a.email.toLowerCase().includes(query)) ||
-          (a.browser && a.browser.toLowerCase().includes(query)) ||
-          (a.note && a.note.toLowerCase().includes(query)) ||
-          a.role.toLowerCase().includes(query);
+        const matchesBrowser = currentTwitterBrowser === 'ALL' || 
+          (a.browser && a.browser.trim() === currentTwitterBrowser) || 
+          (!a.browser && currentTwitterBrowser === '未指定');
 
-        return matchesBrowser && matchesQuery;
+        return matchesQuery && matchesBrowser;
       });
       renderTwitterGrid(filtered);
     }
 
+    // Universal Copy
     function copyText(text, btn) {
+      if (!text) return;
       navigator.clipboard.writeText(text).then(() => {
-        const originalText = btn.textContent;
-        btn.textContent = '已复制!';
-        btn.classList.add('text-emerald-400');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<span class="text-emerald-500 font-bold">已复制!</span>';
         setTimeout(() => {
-          btn.textContent = originalText;
-          btn.classList.remove('text-emerald-400');
+          btn.innerHTML = originalText;
         }, 1500);
-      }).catch(() => {
-        prompt("请复制以下内容:", text);
+      }).catch(err => {
+        console.error('复制失败:', err);
       });
     }
 
-    // Initialization
-    switchManifesto('FR');
-    renderPlatformsGrid(platforms);
-    initTwitterFilters();
-    renderTwitterGrid(twitterAccounts);
+    // Init
+    window.addEventListener('DOMContentLoaded', () => {
+      switchManifesto('FR');
+      renderPlatforms(platforms);
+      renderTwitterBrowserFilters();
+      renderTwitterGrid(twitterAccounts);
+    });
   </script>
 </body>
 </html>
