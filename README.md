@@ -1,6 +1,6 @@
-# Psyverse Commander Hub · 200 全通平台 · 57 推特矩阵 · 66 开发资源大盘
+# Psyverse Commander Hub · 212 全通平台 · 24+ 全球母语 · 57 推特矩阵 · 66 开发资源大盘
 
-Psyverse 全网立体指挥中心：集成 200 全球全通分发平台大盘、8 大母语分发矩阵、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
+Psyverse 全网立体指挥中心：集成 212 全球全通分发平台大盘、24+ 全球核心母语分发矩阵（深度覆盖非洲尼日利亚、东非、中东阿拉伯世界、南亚与欧美大盘）、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
 
 ## Links
 
@@ -10,16 +10,14 @@ Psyverse 全网立体指挥中心：集成 200 全球全通分发平台大盘、
 
 ## Matrix Capabilities (三维立体全景)
 
-- **🌐 200 全球全通分发平台**：覆盖全球顶级 AI 与产品首发（Product Hunt、Toolify、Indie Hackers 等）、极客开源生态（Dev.to、Hashnode、Stack Overflow、Daily.dev、HackerNoon、Hugging Face、Lobste.rs、DZone 等）、去中心化社交（Mirror、Nostr Habla、Bluesky WhiteWind、Lemmy 联邦节点、Farcaster、Lens、DeBank 等）、日韩港台本土阵地（Clien、Ruliweb、Togetter、Qiita、Zenn、Velog、Brunch、PTT、Dcard 等）、欧洲与西语社区（ComputerBase、Developpez、VC.ru、DTF、Habr、Menéame、ForoCoches 等）、认知哲学与前沿科研（OpenReview、Alignment Forum、EA Forum、ResearchGate 等）、开源协同 Etherpad、极客代码 Paste 与独立博客出版。
+- **🌐 212 全球全通分发平台**：覆盖全球顶级 AI 与产品首发（Product Hunt、Toolify、YourStory 等）、极客开源生态（Dev.to、Hashnode、Stack Overflow、Daily.dev、HackerNoon、Hasoub I/O、Hugging Face、Lobste.rs、DZone、Elektroda 等）、去中心化社交（Mirror、Nostr Habla、Bluesky WhiteWind、Lemmy 联邦节点、Farcaster、Lens、DeBank 等）、日韩港台本土阵地（Clien、Ruliweb、Togetter、Qiita、Zenn、Velog、Brunch、PTT、Dcard 等）、非洲与中东国民阵地（**Nairaland 尼日利亚第一大论坛**、JamiiForums 东非、FXP 以色列）、东南亚本土生态（Tinh tế 越南、Pantip 泰国、Kaskus 印尼）、欧洲与西语社区（ComputerBase、Developpez、VC.ru、DTF、Habr、Menéame、ForoCoches 等）、认知哲学与前沿科研（OpenReview、Alignment Forum、EA Forum、ResearchGate 等）、开源协同 Etherpad、极客代码 Paste 与独立博客出版（Somewhere in blog 孟加拉、TabNews 巴西等）。
+- **🌍 24+ 全球核心母语全景矩阵**：
+  - **全球与东亚**：英语 (EN)、中文 (ZH)、日语 (JA)、韩语 (KO)
+  - **非洲与中东**：约鲁巴语 (Yorùbá/尼日利亚)、豪萨语 (Hausa/西非)、斯瓦希里语 (Kiswahili/东非)、阿拉伯语 (العربية)、希伯来语 (עברית)
+  - **南亚与东南亚**：印地语 (हिन्दी/印度)、孟加拉语 (বাংলা)、越南语 (Tiếng Việt)、泰语 (ภาษาไทย)、印尼语 (Bahasa Indonesia)
+  - **欧洲与美洲**：法语 (FR)、德语 (DE)、西班牙语 (ES)、葡萄牙语 (PT/巴西)、意大利语 (IT)、俄语 (RU)、波兰语 (PL)、荷兰语 (NL)、希腊语 (EL)
 - **🐦 57 个 Twitter/X 官方矩阵账号**：按独立浏览器配置（Browser Profile）隔离托管，支持按环境快速筛选与复制。
-- **💻 66 核心开发资源与 AI 云端基建**：
-  - **云原生与边缘计算**：Vercel (3套隔离空间)、Cloudflare、Supabase、Neon Serverless Postgres、Upstash (Redis/Kafka)、PlanetScale、MongoDB Atlas、Railway、Render、Fly.io、Zeabur、Heroku、滴滴云。
-  - **AI模型与算力集群**：OpenAI核心及6组分流矩阵、Groq (500+ tok/s)、DeepSeek (V3/R1)、Together AI、Cerebras (CS-3 晶圆算力)、Fireworks AI、Replicate、Modal Labs、Fal.ai、OpenRouter、Pinecone、Qdrant Cloud、Hugging Face、RunDiffusion生图集群。
-  - **代码与版本托管**：GitHub (370+ 项目)、GitHub Gist/Pages、npm 官方 Package Registry。
-  - **头部云厂商基建**：阿里云 (AliDNS/多区OSS/企业邮)、AWS亚马逊云 (海外EC2/S3)。
-  - **Web3底层开发基建**：Moralis跨链API、Particle Network账户抽象、BitGo机构沙盒、Etherscan、MystLabs Sui。
-  - **开发工具与通讯**：Clerk现代鉴权、Sentry全栈监控、PostHog产品分析、Figma、Airtable、SendGrid、微信/微博开放平台。
-- **严格母语分发**：支持 8 大语言精要展示，绝无跨语种中文污染。
+- **💻 66 核心开发资源与 AI 云端基建**：涵盖 Serverless 数据库、超高速 AI 推理集群（Groq、DeepSeek、Together AI、Cerebras 等）、向量数据库、容器云及现代鉴权监控。
 
 ## Stack
 
