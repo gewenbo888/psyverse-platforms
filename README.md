@@ -1,6 +1,6 @@
-# Psyverse Commander Hub · 250 全通平台与顶级社区 · 24+ 全球母语 · 57 推特矩阵 · 66 开发资源大盘
+# Psyverse Commander Hub · 365 全通平台与顶级社区 · 全模态分发引擎 · 24+ 全球母语 · 57 推特矩阵 · 66 开发资源大盘
 
-Psyverse 全网立体指挥中心：集成 250 全球全通分发平台与顶级极客社区大盘、24+ 全球核心母语分发矩阵（深度覆盖非洲尼日利亚、东非、中东阿拉伯世界、南亚与欧美大盘）、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
+Psyverse 全网立体指挥中心：集成 365 全球全通分发平台与顶级极客社区大盘 · 全模态分发引擎（学术预印本/白皮书PPT/播客音频/创客硬件/开源代码/图文长文）、24+ 全球核心母语分发矩阵（深度覆盖非洲尼日利亚、东非、中东阿拉伯世界、南亚与欧美大盘）、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
 
 ## Links
 
@@ -10,7 +10,14 @@ Psyverse 全网立体指挥中心：集成 250 全球全通分发平台与顶级
 
 ## Matrix Capabilities (三维立体全景)
 
-- **🌐 250 全球全通分发平台与顶级社区**：
+- **🌐 365 全球全通分发平台与顶级社区 · 全模态分发引擎**：
+  - **🎓 学术预印本与开放科学存证（15 平台）**：SSRN (Elsevier)、Zenodo (CERN/欧盟永久 DOI)、OSF Preprints、HAL (法国国家科学研究院)、PhilArchive、ChemRxiv、bioRxiv、medRxiv、PsyArXiv、SocArXiv、Figshare、Dryad、Preprints.org、Europe PMC、SciRate。
+  - **📑 行业白皮书、极客幻灯片与知识库（15 平台）**：Speaker Deck (GitHub/Datadog)、SlideShare (Scribd)、Scribd Documents、DocSend、Mintlify、Coda、Pitch、Canva Presentations、Dribbble Playbooks、Behance、Layers、Mobbin、SourceForge、Codeberg、SourceHut。
+  - **🎙️ 全球长音频播客与声音网络（15 平台）**：Spotify for Podcasters、Apple Podcasts Connect、Amazon Music Podcaster、Pocket Casts、Overcast、Buzzsprout、Transistor.fm、Simplecast、小宇宙播客 (Xiaoyuzhou)、喜马拉雅科技、荔枝 FM、网易云音乐播客、Fountain Podcasts、Podcast Index、Acast。
+  - **🛠️ 创客硬件、物联网与具身智能（15 平台）**：Hackaday、Instructables (Autodesk)、Arduino Project Hub、Raspberry Pi Forums、ROS Discourse (机器人操作系统)、Espressif ESP32、PlatformIO、Adafruit、SparkFun、Seeed Studio、BeagleBoard、KiCad Info、EEVblog、Home Assistant、Dangerous Prototypes。
+  - **🛡️ 网络安全攻防、逆向工程与二进制底层（15 平台）**：0x00sec、Hack The Box、TryHackMe、Wilders Security、看雪安全论坛 (Kanxue)、FreeBuf、先知技术社区、安全客、Kernel.org LKML (Linux 内核邮件列表)、Exploit Database、Packet Storm、OffSec Community、Reverse Engineering Stack Exchange、Phrack Magazine、Open Bug Bounty。
+  - **⚙️ 细分底层语言与新锐运行时生态（20 平台）**：Elixir Forum、ClojureVerse、Zig Community (Ziggit)、Nim Forum、Haskell Discourse、OCaml Discuss、Erlang Forums、Scala Users、D Language Forum、Kotlin Discussions、Crystal Forum、Racket Users、Lua Users、V Language、Gleam Forum、Solidity Forum、Deno Community、Posit/RStudio、Fortran Discourse、Perl Monks。
+  - **🌏 亚太离岸、华语重镇与全球区域高势能（20 平台）**：HKEPC (香港电脑领域)、DonanımHaber (土耳其第一论坛)、Cari.com.my、AnandTech Forums、Tom's Hardware、Overclock.net、Ars Technica OpenForum、Guru3D、Geeks3D、NotebookCheck、FreeCAD Forum、OpenSCAD Forum、Gitee (开源中国)、GitLab Community、Launchpad、Open Collective、BetaNews、ArtStation Case Studies、Tildes、Psyverse Multi-Modal Nexus。
   - **非洲与中东**：Nairaland (尼日利亚第一大论坛)、KenyaTalk (肯尼亚)、TechCabal (泛非科技)、Techpoint Africa (西非极客)、Arab Hardware (埃及与中东硬件论坛)、Hasoub I/O (阿拉伯开源极客)、JamiiForums (东非斯瓦希里语)、FXP (以色列科技论坛)。
   - **南亚与东南亚**：VOZ Forums (越南第一论坛)、Tinh tế (越南数码科技)、Overclockzone (泰国超频极客)、Pantip (泰国国民论坛)、TechEnclave (印度硬件发烧友)、ThinkDigit (印度极客论坛)、YourStory (印度初创生态)、TipidPC (菲律宾硬件社区)、Somewhere in blog (孟加拉第一博客)、Kaskus (印尼第一社区)。
   - **拉美与葡西语**：Platzi Community (拉美最大开发者社群)、Adrenaline (巴西第一硬件社区)、TabNews (巴西技术博客)、Menéame (西班牙)、ForoCoches (西班牙第一论坛)、Taringa (拉美)。
