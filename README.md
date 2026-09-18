@@ -1,6 +1,6 @@
-# Psyverse Commander Hub · 212 全通平台 · 24+ 全球母语 · 57 推特矩阵 · 66 开发资源大盘
+# Psyverse Commander Hub · 250 全通平台与顶级社区 · 24+ 全球母语 · 57 推特矩阵 · 66 开发资源大盘
 
-Psyverse 全网立体指挥中心：集成 212 全球全通分发平台大盘、24+ 全球核心母语分发矩阵（深度覆盖非洲尼日利亚、东非、中东阿拉伯世界、南亚与欧美大盘）、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
+Psyverse 全网立体指挥中心：集成 250 全球全通分发平台与顶级极客社区大盘、24+ 全球核心母语分发矩阵（深度覆盖非洲尼日利亚、东非、中东阿拉伯世界、南亚与欧美大盘）、57 个 Twitter/X 官方矩阵账号与 66 核心开发资源与 AI 云端基建控制台。
 
 ## Links
 
@@ -10,7 +10,14 @@ Psyverse 全网立体指挥中心：集成 212 全球全通分发平台大盘、
 
 ## Matrix Capabilities (三维立体全景)
 
-- **🌐 212 全球全通分发平台**：覆盖全球顶级 AI 与产品首发（Product Hunt、Toolify、YourStory 等）、极客开源生态（Dev.to、Hashnode、Stack Overflow、Daily.dev、HackerNoon、Hasoub I/O、Hugging Face、Lobste.rs、DZone、Elektroda 等）、去中心化社交（Mirror、Nostr Habla、Bluesky WhiteWind、Lemmy 联邦节点、Farcaster、Lens、DeBank 等）、日韩港台本土阵地（Clien、Ruliweb、Togetter、Qiita、Zenn、Velog、Brunch、PTT、Dcard 等）、非洲与中东国民阵地（**Nairaland 尼日利亚第一大论坛**、JamiiForums 东非、FXP 以色列）、东南亚本土生态（Tinh tế 越南、Pantip 泰国、Kaskus 印尼）、欧洲与西语社区（ComputerBase、Developpez、VC.ru、DTF、Habr、Menéame、ForoCoches 等）、认知哲学与前沿科研（OpenReview、Alignment Forum、EA Forum、ResearchGate 等）、开源协同 Etherpad、极客代码 Paste 与独立博客出版（Somewhere in blog 孟加拉、TabNews 巴西等）。
+- **🌐 250 全球全通分发平台与顶级社区**：
+  - **非洲与中东**：Nairaland (尼日利亚第一大论坛)、KenyaTalk (肯尼亚)、TechCabal (泛非科技)、Techpoint Africa (西非极客)、Arab Hardware (埃及与中东硬件论坛)、Hasoub I/O (阿拉伯开源极客)、JamiiForums (东非斯瓦希里语)、FXP (以色列科技论坛)。
+  - **南亚与东南亚**：VOZ Forums (越南第一论坛)、Tinh tế (越南数码科技)、Overclockzone (泰国超频极客)、Pantip (泰国国民论坛)、TechEnclave (印度硬件发烧友)、ThinkDigit (印度极客论坛)、YourStory (印度初创生态)、TipidPC (菲律宾硬件社区)、Somewhere in blog (孟加拉第一博客)、Kaskus (印尼第一社区)。
+  - **拉美与葡西语**：Platzi Community (拉美最大开发者社群)、Adrenaline (巴西第一硬件社区)、TabNews (巴西技术博客)、Menéame (西班牙)、ForoCoches (西班牙第一论坛)、Taringa (拉美)。
+  - **欧洲与北欧**：Overclockers UK (英国硬件大盘)、io-tech.fi (芬兰北欧极客论坛)、Ubuntuusers.de (德国 Linux 社区)、ComputerBase (德国硬件大盘)、Developpez (法国开发者大盘)、Root.cz (捷克 Linux 架构)、Elektroda (波兰工程论坛)、Hardware Upgrade (意大利硬件大盘)、Insomnia (希腊数字社区)、Habr / Pikabu (东欧与俄语)。
+  - **底层官方语言与框架治理**：Rust Users 官方论坛、Python Discussions 官方论坛、PyTorch 官方论坛、Fast.ai 深度学习社区、Blender Artists 3D 渲染论坛、JuliaLang 科学计算社区、Mozilla 官方开源先驱社区、Go Forum (Golang Bridge)。
+  - **前沿 AI 与 Web3 去中心化**：Civitai 生成式 AI 社区、OpenArt 提示词艺术、Gitcoin DAO 治理社区、Uniswap 治理社区、Arbitrum DAO、Optimism Collective、Mirror、Nostr、Farcaster、Lens、DeBank。
+  - **开源协同、极客代码与独立博客**：Etherpad 全球 25 节点、极客代码 Paste 14 节点、DEV/Forem、Hashnode、Stack Overflow、Daily.dev、HackerNoon、DevRant、iFixit、HardForum、VOGONS、Hacker Public Radio、Wasm Builders、Psyverse 主权母舰索引。
 - **🌍 24+ 全球核心母语全景矩阵**：
   - **全球与东亚**：英语 (EN)、中文 (ZH)、日语 (JA)、韩语 (KO)
   - **非洲与中东**：约鲁巴语 (Yorùbá/尼日利亚)、豪萨语 (Hausa/西非)、斯瓦希里语 (Kiswahili/东非)、阿拉伯语 (العربية)、希伯来语 (עברית)
